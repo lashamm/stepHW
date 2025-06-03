@@ -1,4 +1,7 @@
-﻿//                                   HW 1
+﻿
+
+
+//                             1st les HW 1
 
 string name;
 string lastName;
@@ -33,7 +36,7 @@ Console.WriteLine($"your name is {name}" +
 
 
 
-//                                  HW 2 
+//                           1st les HW 2 
 
 
 //double balance;
