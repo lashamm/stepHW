@@ -4,18 +4,18 @@
 //                                             2nd les HW 1
 
 
-//int year;
-//Console.WriteLine("Enter a random year:");
-//year = int.Parse(Console.ReadLine());
+int year;
+Console.WriteLine("Enter a random year:");
+year = int.Parse(Console.ReadLine());
 
-//if(year % 4 == 0)
-//{
-//    Console.WriteLine("leap year");
-//}
-//else
-//{
-//    Console.WriteLine("not a leap year");
-//}
+if (year % 4 == 0)
+{
+    Console.WriteLine("leap year");
+}
+else
+{
+    Console.WriteLine("not a leap year");
+}
 
 
 
@@ -80,6 +80,131 @@
 
 
 //                                            2nd les HW 3
+
+
+//string month;
+
+//Console.WriteLine("enter a month");
+//month = Console.ReadLine().ToLower();
+
+
+//if (month == "january" ||
+//    month == "march" ||
+//    month == "may" ||
+//    month == "july" ||
+//    month == "august" ||
+//    month == "october" ||
+//    month == "december")
+//{
+//    Console.WriteLine("your month has 31 days");
+//}
+//else if (month == "april" ||
+//         month == "june" ||
+//         month == "september" ||
+//         month == "november")
+//{
+//    Console.WriteLine("your month has 30 days");
+//}
+//else if (month == "february")
+//{
+//    Console.WriteLine("your month has 28 days, or 29 in a leap year");
+//}
+//else
+//{
+//    Console.WriteLine("invalid month name entered");
+//}
+
+
+
+//                                            2nd les HW 4
+
+//int temperature;
+
+//Console.WriteLine("Enter the temperature");
+//temperature = int.Parse(Console.ReadLine());
+
+//if (temperature <= 10)
+//{
+//    Console.WriteLine("it's cold outside");
+//}
+//else if(temperature > 10 && temperature < 23)
+//{
+//    Console.WriteLine("it's warm outside");
+//}
+//else if(temperature >= 23)
+//{
+//    Console.WriteLine("it's hot outside");
+//}
+//else
+//{
+//    Console.WriteLine("invalid temperature entered");
+//}
+
+
+
+
+//                                            2nd les HW 5
+
+
+//char symbol;
+
+
+//Console.WriteLine("enter a symbol");
+//symbol = char.Parse(Console.ReadLine().ToLower());
+
+//if (symbol == 'a' ||
+//    symbol == 'e' ||
+//    symbol == 'i' ||
+//    symbol == 'o' ||
+//    symbol == 'u')
+//{
+//    Console.WriteLine("aso xmovania");
+//}
+//else if (symbol >= 'a' && symbol <= 'z')
+//{
+//    Console.WriteLine("aso tanxmovania");
+//}
+//else
+//{
+//    Console.WriteLine("invalid symbol entered");
+//}
+
+
+//                                            2nd les HW 6
+
+//string password;
+//string confirmPassword;
+
+//Console.WriteLine("enter password");
+//password = Console.ReadLine();
+
+//Console.WriteLine("confirm password");
+//confirmPassword = Console.ReadLine();
+
+//if (password == confirmPassword)
+//{
+//    Console.WriteLine("passwords match");
+//}
+//else
+//{
+//    Console.WriteLine("passwords do not match");
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
