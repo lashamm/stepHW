@@ -39,41 +39,53 @@ else
 //Console.WriteLine("2*3");
 //fifthQuestion = int.Parse(Console.ReadLine());
 
-//if (firstQuestion == 4) { 
-//finalResult += 20;
+//if (firstQuestion == 4)
+//{
+//    finalResult += 20;
 //}
-//else{
+//else
+//{
 //    finalResult -= 20;
 //}
-//if (secondQuestion == 4){
+//if (secondQuestion == 4)
+//{
 //    finalResult += 20;
 //}
-//else{
+//else
+//{
 //    finalResult -= 0;
 //}
-//if (thirdQuestion == 4){
+//if (thirdQuestion == 4)
+//{
 //    finalResult += 20;
 //}
-//else{
+//else
+//{
 //    finalResult -= 0;
 //}
-//if (fourthQuestion == 3){
+//if (fourthQuestion == 3)
+//{
 //    finalResult += 20;
 //}
-//else{
+//else
+//{
 //    finalResult -= 0;
 //}
-//if (fifthQuestion == 6){
+//if (fifthQuestion == 6)
+//{
 //    finalResult += 20;
 //}
-//else{
+//else
+//{
 //    finalResult -= 0;
 //}
 
-//if (finalResult >= 60){
+//if (finalResult >= 60)
+//{
 //    Console.WriteLine($"You passed the test your score is {finalResult}");
 //}
-//else{
+//else
+//{
 //    Console.WriteLine($"You failed the test, your score is {finalResult} you need atleast 60");
 //}
 
@@ -127,11 +139,11 @@ else
 //{
 //    Console.WriteLine("it's cold outside");
 //}
-//else if(temperature > 10 && temperature < 23)
+//else if (temperature > 10 && temperature < 23)
 //{
 //    Console.WriteLine("it's warm outside");
 //}
-//else if(temperature >= 23)
+//else if (temperature >= 23)
 //{
 //    Console.WriteLine("it's hot outside");
 //}
