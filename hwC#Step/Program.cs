@@ -1,21 +1,82 @@
-﻿
+﻿//                                           3rd les HW 1
+
+//int n;
+//int sum = 0;
+//Console.WriteLine("Enter number");
+//n = int.Parse(Console.ReadLine());
+//for (int i = 1; i < n + 1; i++) {
+//    sum += i;
+
+//}
+//Console.WriteLine(sum);
+
+//                                            3rd les HW 2
+
+//int n;
+//Console.WriteLine("Enter number");
+//n = int.Parse(Console.ReadLine());
+
+//for (int i = 1; i <= n; i++) {
+//    Console.WriteLine($"{i} * {n} = {i*n}");
+//}
+
+//                                            3rd les HW 3
+//int pyramid = 10;
+//for (int i = 1; i <= pyramid; i++) {
+//    for (int j = 1; j <= i; j++) {
+//        Console.Write($"{i}");
+//    }
+//    Console.WriteLine();
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //                                             2nd les HW 1
 
 
-int year;
-Console.WriteLine("Enter a random year:");
-year = int.Parse(Console.ReadLine());
+//int year;
+//Console.WriteLine("Enter a random year:");
+//year = int.Parse(Console.ReadLine());
 
-if (year % 4 == 0)
-{
-    Console.WriteLine("leap year");
-}
-else
-{
-    Console.WriteLine("not a leap year");
-}
+//if (year % 4 == 0)
+//{
+//    Console.WriteLine("leap year");
+//}
+//else
+//{
+//    Console.WriteLine("not a leap year");
+//}
 
 
 
