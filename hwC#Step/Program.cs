@@ -4,7 +4,8 @@
 //int sum = 0;
 //Console.WriteLine("Enter number");
 //n = int.Parse(Console.ReadLine());
-//for (int i = 1; i < n + 1; i++) {
+//for (int i = 1; i < n + 1; i++)
+//{
 //    sum += i;
 
 //}
@@ -16,28 +17,59 @@
 //Console.WriteLine("Enter number");
 //n = int.Parse(Console.ReadLine());
 
-//for (int i = 1; i <= n; i++) {
-//    Console.WriteLine($"{i} * {n} = {i*n}");
+//for (int i = 1; i <= n; i++)
+//{
+//    Console.WriteLine($"{i} * {n} = {i * n}");
 //}
 
 //                                            3rd les HW 3
+
 //int pyramid = 10;
-//for (int i = 1; i <= pyramid; i++) {
-//    for (int j = 1; j <= i; j++) {
-//        Console.Write($"{i}");
+//for (int i = 1; i <= pyramid; i++)
+//{
+//    for (int j = 1; j <= i; j++)
+//    {
+//        Console.Write($"{j}");
 //    }
 //    Console.WriteLine();
 //}
 
 
+//                                            3rd les HW 4
+
+//int n;
+//int sum = 0;
+//Console.WriteLine("Enter number");
+//n = int.Parse(Console.ReadLine());
+//for (int i = 1; i < n + 1; i++)
+//{
+//    if (i % 2 == 0)
+//    {
+//        sum += i;
+//    }
+
+//}
+//Console.WriteLine(sum);
 
 
 
+//                                            3rd les HW 5
 
+//int n;
+//Console.WriteLine("Enter number");
+//n = int.Parse(Console.ReadLine());
+//int sum = 0;
+//for (int i = 1; i <= n; i++)
+//{
+//	int square = i * i;
+//	Console.WriteLine($"{i} * {i} = {square}");
+//	sum += square;
+//}
+//Console.WriteLine($"sum of the squares are {sum}");
 
+//                                              3rd les HW 6
 
-
-
+//  ვერ გავაკეთე :(
 
 
 
