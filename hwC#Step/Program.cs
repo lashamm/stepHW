@@ -1,4 +1,23 @@
-﻿//                                           3rd les HW 1
+﻿
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//                                           3rd les HW 1
 
 //int n;
 //int sum = 0;
@@ -84,23 +103,6 @@ for (int i = 2; i<n; i++)
 }
 string result = isPrime ? $"{n} is prime" : $"{n} is not prime";
 Console.WriteLine(result);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
