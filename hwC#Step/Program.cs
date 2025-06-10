@@ -1,15 +1,15 @@
 ﻿//                                           3rd les HW 1
 
-int n;
-int sum = 0;
-Console.WriteLine("Enter number");
-n = int.Parse(Console.ReadLine());
-for (int i = 1; i < n + 1; i++)
-{
-    sum += i;
+//int n;
+//int sum = 0;
+//Console.WriteLine("Enter number");
+//n = int.Parse(Console.ReadLine());
+//for (int i = 1; i < n + 1; i++)
+//{
+//    sum += i;
 
-}
-Console.WriteLine(sum);
+//}
+//Console.WriteLine(sum);
 
 //                                            3rd les HW 2
 
@@ -69,8 +69,21 @@ Console.WriteLine(sum);
 
 //                                              3rd les HW 6
 
+int n;
+Console.WriteLine("Enter Number");
+n = int.Parse(Console.ReadLine());
+bool isPrime = true;
 
-
+for (int i = 2; i<n; i++)
+{
+    if(n % i == 0)
+    {
+        isPrime = false;
+        break;
+    }
+}
+string result = isPrime ? $"{n} is prime" : $"{n} is not prime";
+Console.WriteLine(result);
 
 
 
