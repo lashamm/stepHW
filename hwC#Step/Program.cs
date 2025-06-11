@@ -1,9 +1,21 @@
-﻿
+﻿//                                   4th les HW 1
 
+int[] nums1 = {1,2,3,4};
+int[] nums2 = {5,6,7,8};
+int[] resultArray = new int[nums1.Length + nums2.Length];
 
-
-
-
+for(int i = 0; i < nums1.Length; i++)
+{
+    resultArray[i] = nums1[i];
+}
+for(int i = 0; i < nums2.Length; i++)
+{
+    resultArray[nums1.Length + i] = nums2[i];
+}
+for(int i = 0; i < resultArray.Length; i++)
+{
+    Console.WriteLine(resultArray[i]);
+}
 
 
 
@@ -88,21 +100,21 @@
 
 //                                              3rd les HW 6
 
-int n;
-Console.WriteLine("Enter Number");
-n = int.Parse(Console.ReadLine());
-bool isPrime = true;
+//int n;
+//Console.WriteLine("Enter Number");
+//n = int.Parse(Console.ReadLine());
+//bool isPrime = true;
 
-for (int i = 2; i<n; i++)
-{
-    if(n % i == 0)
-    {
-        isPrime = false;
-        break;
-    }
-}
-string result = isPrime ? $"{n} is prime" : $"{n} is not prime";
-Console.WriteLine(result);
+//for (int i = 2; i<n; i++)
+//{
+//    if(n % i == 0)
+//    {
+//        isPrime = false;
+//        break;
+//    }
+//}
+//string result = isPrime ? $"{n} is prime" : $"{n} is not prime";
+//Console.WriteLine(result);
 
 
 
