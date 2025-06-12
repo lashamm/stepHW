@@ -52,8 +52,22 @@
 
 //                                      4th les HW 4
 
+int[] nums = { 1, 24, 32, 44, 59, 65, 73, 83, 92, 10, 17, 12 };
+int num;
+Console.WriteLine("enter number");
+num = int.Parse(Console.ReadLine());
 
-
+for(int i = 0; i < nums.Length; i++)
+{
+    if (nums[i] == num)
+    {
+        Console.WriteLine($"Number {num} is present");
+    }
+};
+if (!nums.Contains(num))
+{
+        Console.WriteLine($"Number {num} is not present");
+}
 
 
 
