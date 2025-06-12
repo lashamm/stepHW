@@ -1,18 +1,18 @@
 ﻿//                                   4th les HW 1
 
-//int[] nums1 = {1,2,3,4};
-//int[] nums2 = {5,6,7,8};
+//int[] nums1 = { 1, 2, 3, 4 };
+//int[] nums2 = { 5, 6, 7, 8 };
 //int[] resultArray = new int[nums1.Length + nums2.Length];
 
-//for(int i = 0; i < nums1.Length; i++)
+//for (int i = 0; i < nums1.Length; i++)
 //{
 //    resultArray[i] = nums1[i];
 //}
-//for(int i = 0; i < nums2.Length; i++)
+//for (int i = 0; i < nums2.Length; i++)
 //{
 //    resultArray[nums1.Length + i] = nums2[i];
 //}
-//for(int i = 0; i < resultArray.Length; i++)
+//for (int i = 0; i < resultArray.Length; i++)
 //{
 //    Console.WriteLine(resultArray[i]);
 //}
@@ -34,9 +34,23 @@
 //    }
 //}
 
+//                                      4th les HW 3
 
+//int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
+//for(int i = 0; i < nums.Length; i++)
+//{
+//    if (nums[i] % 2 == 0)
+//    {
+//        Console.WriteLine($"{nums[i]} is even");
+//    }
+//    else
+//    {
+//        Console.WriteLine($"{nums[i]} is odd");
+//    }
+//}
 
+//                                      4th les HW 4
 
 
 
