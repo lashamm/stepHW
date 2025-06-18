@@ -1,4 +1,45 @@
-﻿//                                   4th les HW 1
+﻿//                                         6th les HW 1 
+
+//                                          ახარისხება
+
+//int num;
+//int power;
+//Console.WriteLine("Enter number");
+//num = int.Parse(Console.ReadLine());
+//Console.WriteLine("Enter power");
+//power = int.Parse(Console.ReadLine());
+
+//static void Power(int number, int power)
+//{   
+//    int result = 1;
+//    for (int i = 0; i < power; i++)
+//    {
+//        result *= number;
+//    }
+//    Console.WriteLine($"The result of {number} raised to the power of {power} is: {result}");
+//}
+//Power(num, power);
+
+
+
+//                                         6th les HW 2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//                                   4th les HW 1
 
 //int[] nums1 = { 1, 2, 3, 4 };
 //int[] nums2 = { 5, 6, 7, 8 };
@@ -52,22 +93,22 @@
 
 //                                      4th les HW 4
 
-int[] nums = { 1, 24, 32, 44, 59, 65, 73, 83, 92, 10, 17, 12 };
-int num;
-Console.WriteLine("enter number");
-num = int.Parse(Console.ReadLine());
+//int[] nums = { 1, 24, 32, 44, 59, 65, 73, 83, 92, 10, 17, 12 };
+//int num;
+//Console.WriteLine("enter number");
+//num = int.Parse(Console.ReadLine());
 
-for(int i = 0; i < nums.Length; i++)
-{
-    if (nums[i] == num)
-    {
-        Console.WriteLine($"Number {num} is present");
-    }
-};
-if (!nums.Contains(num))
-{
-        Console.WriteLine($"Number {num} is not present");
-}
+//for(int i = 0; i < nums.Length; i++)
+//{
+//    if (nums[i] == num)
+//    {
+//        Console.WriteLine($"Number {num} is present");
+//    }
+//};
+//if (!nums.Contains(num))
+//{
+//        Console.WriteLine($"Number {num} is not present");
+//}
 
 
 
