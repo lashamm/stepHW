@@ -25,9 +25,24 @@
 //                                         6th les HW 2
 
 
+//int n;
+//Console.WriteLine("Enter Number");
+//n = int.Parse(Console.ReadLine());
+//bool isPrime = true;
 
-
-
+//static void CheckPrime(int number)
+//{
+//    for (int i = 2; i <= Math.Sqrt(number); i++)
+//    {
+//        if (number % i == 0)
+//        {
+//            Console.WriteLine($"{number} is not prime");
+//            return;
+//        }
+//    }
+//    Console.WriteLine($"{number} is prime");
+//}
+//CheckPrime(n);
 
 
 
