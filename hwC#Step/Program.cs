@@ -28,15 +28,16 @@
 //int n;
 //Console.WriteLine("Enter Number");
 //n = int.Parse(Console.ReadLine());
-//bool isPrime = true;
 
 //static void CheckPrime(int number)
 //{
 //    for (int i = 2; i <= Math.Sqrt(number); i++)
 //    {
+//        bool isPrime;
 //        if (number % i == 0)
 //        {
 //            Console.WriteLine($"{number} is not prime");
+//            isPrime = false;
 //            return;
 //        }
 //    }
@@ -46,8 +47,55 @@
 
 
 
+//                                        6th les HW 3
+
+//                                         palindrome
+
+//string word;
+//Console.WriteLine("Enter a word");
+//word = Console.ReadLine().ToLower();
+
+//static void CheckPalindrome(string input)
+//{
+//    string reversed = string.Empty;
+//    for (int i = input.Length - 1; i >= 0; i--)
+//    {
+//        reversed += input[i];
+//    }
+
+//    if (input == reversed)
+//    {
+//        Console.WriteLine($"{input} is a palindrome");
+//    }
+//    else
+//    {
+//        Console.WriteLine($"{input} is not a palindrome");
+//    }
+//}
+
+//CheckPalindrome(word);
 
 
+//                                        6th les HW 4
+
+//using System.Diagnostics.CodeAnalysis;
+
+//int[] num = new int[10] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+
+//static void CheckEvenOdd(int[] number)
+//{
+//    int sum = 0;
+//    for (int i = 0; i < number.Length; i++)
+//    {
+//        if (number[i] % 2 == 0)
+//        {
+//            sum += number[i];
+//        }
+//    }
+//    Console.WriteLine(sum);
+//}
+//CheckEvenOdd(num);
 
 
 
