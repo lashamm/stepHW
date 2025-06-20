@@ -1,6 +1,5 @@
 ﻿//                                         6th les HW 1 
 
-//                                          ახარისხება
 
 //int num;
 //int power;
@@ -49,7 +48,6 @@
 
 //                                        6th les HW 3
 
-//                                         palindrome
 
 //string word;
 //Console.WriteLine("Enter a word");
@@ -96,6 +94,44 @@
 //    Console.WriteLine(sum);
 //}
 //CheckEvenOdd(num);
+
+
+
+
+
+//                                       5th les HW 1
+//                                   find length of a string
+
+//string str;
+//int length = 0;
+//Console.WriteLine("Enter a string");
+//str = Console.ReadLine();
+
+
+//    for(int i = 0; i < str.Length; i++)
+//    {
+//        length++;
+//    }
+//    Console.WriteLine($"Length of a {str} is {length}");
+
+
+
+//                                       5th les HW 2
+//                                   reverse a string
+
+//string str;
+//Console.WriteLine("Enter a string");
+//str = Console.ReadLine();
+//string reversed = string.Empty;
+
+//for (int i = str.Length - 1; i >= 0; i--)
+//{
+//    reversed += str[i];
+//}
+//Console.WriteLine($"Reversed string is {reversed}");
+
+
+
 
 
 
