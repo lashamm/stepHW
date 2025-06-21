@@ -1,4 +1,13 @@
-﻿//                                         6th les HW 1 
+﻿//                                     7th les HW 2
+
+
+
+
+
+
+
+
+//                                         6th les HW 1 
 
 
 //int num;
