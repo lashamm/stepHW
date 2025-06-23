@@ -5,22 +5,37 @@ namespace hwC_Step
     {
         public string Name { get; set; }
         public string Surname { get; set; }
-        public int Age { get; set; }
+        public DateTime Age { get; set; }
         public int StudentId { get; set; }
         public int ClassId { get; set; }
         public Student(string name,
-            int age, 
+            DateTime age, 
             string surname,
             int studentId,
-            int ClassId
+            int classId
             )
         {
             Name = name;
             Age = age;
             Surname = surname;
             StudentId = studentId;
-            ClassId = ClassId;
+            ClassId = classId;
         }
-        
+
+        public int GetAge()
+        {
+            int result = DateTime.Now.Year - Age.Year;
+            if (DateTime.Now.DayOfYear < Age.DayOfYear)
+            {
+                result--;
+            }
+            return result;
+        }
+        public void printInfo()
+        {
+            Console.WriteLine($"Name: {Name}, Surname: {Surname}, Age: {GetAge()}, StudentId: {StudentId}, ClassId: {ClassId}");
+            
+        }
+
     }
 }

@@ -1,8 +1,39 @@
 ﻿//                                     7th les HW 2
 
 
+using hwC_Step;
 
+Student student = new Student(
+    "John",
+    new DateTime(2000, 5, 15),
+    "Doe",
+    12345, 1
+    );
 
+//student.printInfo(); 
+
+Lector lector = new Lector(
+    "Jane",
+    "Smith"
+    );
+//lector.PrintInfoLector();
+
+int choice; 
+Console.WriteLine("Press 1 to see first HomeWork and press 2 to see Second homework");
+choice = int.Parse(Console.ReadLine());
+
+if(choice == 1)
+{
+    lector.PrintInfoLector();
+}
+else if(choice == 2)
+{
+    student.printInfo();
+}
+else
+{
+    Console.WriteLine("Invalid choice");
+}
 
 
 
