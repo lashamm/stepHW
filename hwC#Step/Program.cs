@@ -1,7 +1,7 @@
 ﻿//                                     7th les HW 1 and 2
 
 
-using hwC_Step;
+using hwC_Step.Models;
 
 Student student = new Student(
     "John",

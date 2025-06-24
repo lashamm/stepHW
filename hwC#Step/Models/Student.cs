@@ -1,5 +1,4 @@
-﻿
-namespace hwC_Step
+﻿namespace hwC_Step.Models
 {
     internal class Student
     {
