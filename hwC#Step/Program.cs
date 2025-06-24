@@ -1,4 +1,4 @@
-﻿//                                     7th les HW 2
+﻿//                                     7th les HW 1 and 2
 
 
 using hwC_Step;
@@ -18,15 +18,15 @@ Lector lector = new Lector(
     );
 //lector.PrintInfoLector();
 
-int choice; 
+int choice;
 Console.WriteLine("Press 1 to see first HomeWork and press 2 to see Second homework");
 choice = int.Parse(Console.ReadLine());
 
-if(choice == 1)
+if (choice == 1)
 {
     lector.PrintInfoLector();
 }
-else if(choice == 2)
+else if (choice == 2)
 {
     student.printInfo();
 }
@@ -172,6 +172,85 @@ else
 
 
 
+//                                       5th les HW 3
+
+//string str;
+//int wordCount = 0;
+//Console.WriteLine("Enter a string");
+//str = Console.ReadLine();
+
+//while (str != null)
+//{
+//    int index = str.IndexOf(' ');
+//    if (index == -1)
+//    {
+//        wordCount++;
+//        break;
+//    }
+//    else
+//    {
+//        wordCount++;
+//        str = str.Substring(index + 1);
+//    }
+//}
+//Console.WriteLine(wordCount);
+
+
+//                                       5th les HW 4
+
+//                                   check if two stings are the same
+
+//string str1;
+//string str2;
+
+//Console.WriteLine("Enter a first word");
+//str1 = Console.ReadLine();
+//Console.WriteLine("Enter a second word");
+//str2 = Console.ReadLine();
+
+//if (str1 != str2)
+//{
+//    Console.WriteLine("Not a same words");
+//}
+//else if (str1 == str2)
+//{
+//    Console.WriteLine("Same words");
+//}
+//else
+//{
+//    Console.WriteLine("Invalid input");
+//}
+
+
+
+//                                       5th les HW 5
+//                                   count symbols numbers and special characters in a string
+
+//string str;
+
+//Console.WriteLine("Enter a string");
+//str = Console.ReadLine();
+//int letterCount = 0;
+//int numberCount = 0;
+//int specialCharCount = 0;
+
+//for (int i = 0; i < str.Length; i++)
+//{
+//    if(char.IsLetter(str[i]))
+//    {
+//        letterCount++;
+//    }
+//    else if (char.IsDigit(str[i]))
+//    {
+//        numberCount++;
+//    }
+//    else if (!char.IsLetterOrDigit(str[i]))
+//    {
+//        specialCharCount++;
+//    }
+//}
+
+//Console.WriteLine($"Letters: {letterCount}, Numbers: {numberCount}, Special Characters: {specialCharCount}");
 
 
 
