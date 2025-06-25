@@ -1,39 +1,134 @@
-﻿//                                     7th les HW 1 and 2
-
+﻿//                                     8th les HW
 
 using hwC_Step.Models;
+using hwC_Step.Enums;
 
-Student student = new Student(
-    "John",
-    new DateTime(2000, 5, 15),
-    "Doe",
-    12345, 1
-    );
+Employ employ1 = new Employ(
+    EmployName.John,
+    new DateTime(1992),
+    EmploySurname.Smith,
+    EmployJobTitle.Developer,
+    EmploySalary.Medium,
+    Country.Georgia
+);
+Employ employ2 = new Employ(
+    EmployName.Jane,
+    new DateTime(1994),
+    EmploySurname.Johnson,
+    EmployJobTitle.Designer,
+    EmploySalary.Low,
+    Country.Norway
+);
+Employ employ3 = new Employ(
+    EmployName.Alice,
+    new DateTime(1982),
+    EmploySurname.Williams,
+    EmployJobTitle.Manager,
+    EmploySalary.High,
+    Country.Japan
+);
+Employ employ4 = new Employ(
+    EmployName.Bob,
+    new DateTime(1978),
+    EmploySurname.Brown,
+    EmployJobTitle.Analyst,
+    EmploySalary.VeryHigh,
+    Country.Spain
+);
+Employ employ5 = new Employ(
+    EmployName.Charlie,
+    new DateTime(2000),
+    EmploySurname.Davis,
+    EmployJobTitle.Developer,
+    EmploySalary.Medium,
+    Country.Georgia
+);
+Employ employ6 = new Employ(
+    EmployName.David,
+    new DateTime(2002),
+    EmploySurname.Wilson,
+    EmployJobTitle.Designer,
+    EmploySalary.Low,
+    Country.Norway
+);
+Employ employ7 = new Employ(
+    EmployName.Gregory,
+    new DateTime(1976),
+    EmploySurname.House,
+    EmployJobTitle.Doctor,
+    EmploySalary.High,
+    Country.Japan
+);
+Employ employ8 = new Employ(
+    EmployName.Frank,
+    new DateTime(1996),
+    EmploySurname.Taylor,
+    EmployJobTitle.Manager,
+    EmploySalary.VeryHigh,
+    Country.Spain
+);
 
-//student.printInfo(); 
+Employ[] employs = new Employ[8];
+Employ[] employArray = { 
+    employ1,
+    employ2,
+    employ3,
+    employ4,
+    employ5,
+    employ6,
+    employ7,
+    employ8 
+};
 
-Lector lector = new Lector(
-    "Jane",
-    "Smith"
-    );
-//lector.PrintInfoLector();
-
-int choice;
-Console.WriteLine("Press 1 to see first HomeWork and press 2 to see Second homework");
-choice = int.Parse(Console.ReadLine());
-
-if (choice == 1)
+for(int i = 0; i < employArray.Length; i++)
 {
-    lector.PrintInfoLector();
+    if (employArray[i].Country == "Georgia") {
+        employs[i] = employArray[i];
+        employs[i].PrintEmoployInfo();
+    }
 }
-else if (choice == 2)
-{
-    student.printInfo();
-}
-else
-{
-    Console.WriteLine("Invalid choice");
-}
+
+
+
+
+
+
+//                                     7th les HW 1 and 2
+
+
+//using hwC_Step.Models;
+
+//Student student = new Student(
+//    "John",
+//    new DateTime(2000, 5, 15),
+//    "Doe",
+//    12345, 1
+//    );
+
+////student.printInfo(); 
+
+//Lector lector = new Lector(
+//    "Jane",
+//    "Smith"
+//    );
+////lector.PrintInfoLector();
+
+//int choice;
+//Console.WriteLine("Press 1 to see first HomeWork and press 2 to see Second homework");
+//choice = int.Parse(Console.ReadLine());
+
+//if (choice == 1)
+//{
+//    lector.PrintInfoLector();
+//}
+//else if (choice == 2)
+//{
+//    student.printInfo();
+//}
+//else
+//{
+//    Console.WriteLine("Invalid choice");
+//}
 
 
 
