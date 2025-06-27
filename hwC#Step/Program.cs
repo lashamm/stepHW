@@ -1,92 +1,231 @@
-﻿//                                     8th les HW
+﻿//                                 9th les HW
 
 using hwC_Step.Models;
 using hwC_Step.Enums;
 
-Employ employ1 = new Employ(
-    EmployName.John,
-    new DateTime(1992),
-    EmploySurname.Smith,
-    EmployJobTitle.Developer,
-    EmploySalary.Medium,
-    Country.Georgia
-);
-Employ employ2 = new Employ(
-    EmployName.Jane,
-    new DateTime(1994),
-    EmploySurname.Johnson,
-    EmployJobTitle.Designer,
-    EmploySalary.Low,
-    Country.Norway
-);
-Employ employ3 = new Employ(
-    EmployName.Alice,
-    new DateTime(1982),
-    EmploySurname.Williams,
-    EmployJobTitle.Manager,
-    EmploySalary.High,
-    Country.Japan
-);
-Employ employ4 = new Employ(
-    EmployName.Bob,
-    new DateTime(1978),
-    EmploySurname.Brown,
-    EmployJobTitle.Analyst,
-    EmploySalary.VeryHigh,
-    Country.Spain
-);
-Employ employ5 = new Employ(
-    EmployName.Charlie,
-    new DateTime(2000),
-    EmploySurname.Davis,
-    EmployJobTitle.Developer,
-    EmploySalary.Medium,
-    Country.Georgia
-);
-Employ employ6 = new Employ(
-    EmployName.David,
-    new DateTime(2002),
-    EmploySurname.Wilson,
-    EmployJobTitle.Designer,
-    EmploySalary.Low,
-    Country.Norway
-);
-Employ employ7 = new Employ(
-    EmployName.Gregory,
-    new DateTime(1976),
-    EmploySurname.House,
-    EmployJobTitle.Doctor,
-    EmploySalary.High,
-    Country.Japan
-);
-Employ employ8 = new Employ(
-    EmployName.Frank,
-    new DateTime(1996),
-    EmploySurname.Taylor,
-    EmployJobTitle.Manager,
-    EmploySalary.VeryHigh,
-    Country.Spain
-);
+int choice;
+char refuel;
+char drive;
 
-Employ[] employs = new Employ[8];
-Employ[] employArray = { 
-    employ1,
-    employ2,
-    employ3,
-    employ4,
-    employ5,
-    employ6,
-    employ7,
-    employ8 
-};
 
-for(int i = 0; i < employArray.Length; i++)
+Console.WriteLine(
+    $"Hello, choose a car! " +
+    "\nPress 1. to choose a petrol powered car " +
+    "\nPress 2. to choose a disel powered car" +
+    "\nPress 3. to choose an electric powered car");
+choice = int.Parse(Console.ReadLine());
+
+if (choice == 1)
 {
-    if (employArray[i].Country == "Georgia") {
-        employs[i] = employArray[i];
-        employs[i].PrintEmoployInfo();
+    Car petrolCar = new Car(Fuels.Gasoline, CarFuelType.PetrolCar, 0);
+    Console.Clear();
+    if (petrolCar.Fuel == 0) { 
+        Console.WriteLine($"You need to refuel your car first!" +
+            $"\npress R to refuel");
+        refuel = Console.ReadKey().KeyChar;
+        Console.Clear();
+        if (refuel == 'r' || refuel == 'R')
+        {
+            petrolCar.refuel();
+            Console.WriteLine("press D to drive");
+            drive = Console.ReadKey().KeyChar;
+            Console.Clear();
+            if (drive == 'd' || drive == 'D')
+            {
+                petrolCar.Drive();
+            }
+            else
+            {
+                Console.WriteLine("Invalid input, please try again.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid input, please try again.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid input, please try again.");
     }
 }
+
+     if (choice == 2)
+{
+    Car dieselCar = new Car(Fuels.Diesel, CarFuelType.DieselCar, 0);
+    Console.Clear();
+    if (dieselCar.Fuel == 0)
+    {
+        Console.WriteLine($"You need to refuel your car first!" +
+            $"\npress R to refuel");
+        refuel = Console.ReadKey().KeyChar;
+        Console.Clear();
+        if (refuel == 'r' || refuel == 'R')
+        {
+            dieselCar.refuel();
+            Console.WriteLine("press D to drive");
+            drive = Console.ReadKey().KeyChar;
+            Console.Clear();
+            if (drive == 'd' || drive == 'D')
+            {
+                dieselCar.Drive();
+            }
+            else
+            {
+                Console.WriteLine("Invalid input, please try again.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid input, please try again.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid input, please try again.");
+    }
+}
+else if (choice == 3)
+{
+    Car electricCar = new Car(Fuels.Electric, CarFuelType.ElectricCar, 0);
+    Console.Clear();
+    if (electricCar.Fuel == 0)
+    {
+        Console.WriteLine($"You need to charge your car first!" +
+            $"\npress R to charge");
+        refuel = Console.ReadKey().KeyChar;
+        Console.Clear();
+        if (refuel == 'r' || refuel == 'R')
+        {
+            electricCar.refuel();
+            Console.WriteLine("press D to drive");
+            drive = Console.ReadKey().KeyChar;
+            Console.Clear();
+            if (drive == 'd' || drive == 'D')
+            {
+                electricCar.Drive();
+            }
+            else
+            {
+                Console.WriteLine("Invalid input, please try again.");
+            }
+        }
+        else
+        {
+            Console.WriteLine("Invalid input, please try again.");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid input, please try again.");
+    }
+}
+else
+{
+    Console.WriteLine("Invalid choice");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+////                                     8th les HW
+
+//using hwC_Step.Models;
+//using hwC_Step.Enums;
+
+//Employ employ1 = new Employ(
+//    EmployName.John,
+//    new DateTime(1992),
+//    EmploySurname.Smith,
+//    EmployJobTitle.Developer,
+//    EmploySalary.Medium,
+//    Country.Georgia
+//);
+//Employ employ2 = new Employ(
+//    EmployName.Jane,
+//    new DateTime(1994),
+//    EmploySurname.Johnson,
+//    EmployJobTitle.Designer,
+//    EmploySalary.Low,
+//    Country.Norway
+//);
+//Employ employ3 = new Employ(
+//    EmployName.Alice,
+//    new DateTime(1982),
+//    EmploySurname.Williams,
+//    EmployJobTitle.Manager,
+//    EmploySalary.High,
+//    Country.Japan
+//);
+//Employ employ4 = new Employ(
+//    EmployName.Bob,
+//    new DateTime(1978),
+//    EmploySurname.Brown,
+//    EmployJobTitle.Analyst,
+//    EmploySalary.VeryHigh,
+//    Country.Spain
+//);
+//Employ employ5 = new Employ(
+//    EmployName.Charlie,
+//    new DateTime(2000),
+//    EmploySurname.Davis,
+//    EmployJobTitle.Developer,
+//    EmploySalary.Medium,
+//    Country.Georgia
+//);
+//Employ employ6 = new Employ(
+//    EmployName.David,
+//    new DateTime(2002),
+//    EmploySurname.Wilson,
+//    EmployJobTitle.Designer,
+//    EmploySalary.Low,
+//    Country.Norway
+//);
+//Employ employ7 = new Employ(
+//    EmployName.Gregory,
+//    new DateTime(1976),
+//    EmploySurname.House,
+//    EmployJobTitle.Doctor,
+//    EmploySalary.High,
+//    Country.Japan
+//);
+//Employ employ8 = new Employ(
+//    EmployName.Frank,
+//    new DateTime(1996),
+//    EmploySurname.Taylor,
+//    EmployJobTitle.Manager,
+//    EmploySalary.VeryHigh,
+//    Country.Spain
+//);
+
+//Employ[] employs = new Employ[8];
+//Employ[] employArray = { 
+//    employ1,
+//    employ2,
+//    employ3,
+//    employ4,
+//    employ5,
+//    employ6,
+//    employ7,
+//    employ8 
+//};
+
+//for(int i = 0; i < employArray.Length; i++)
+//{
+//    if (employArray[i].Country == "Georgia") {
+//        employs[i] = employArray[i];
+//        employs[i].PrintEmoployInfo();
+//    }
+//}
 
 
 
