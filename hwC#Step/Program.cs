@@ -1,129 +1,145 @@
-﻿//                                 9th les HW
+﻿///                                10th les HW
+/// პირობა:
+/// 1. შექმენით აბსტრაქტული კლასი Shape (Area() მეთოდით)
+/// 2. შექმენით derived კლასები: Circle, Rectangle, Triangle
+/// 3. გამოიყენეთ პოლიმორფიზმი: შექმენით Shape მასივი და მასში
+/// დაამატეთ ფართობები Area() მეთოდით
 
 using hwC_Step.Models;
-using hwC_Step.Enums;
 
-int choice;
-char refuel;
-char drive;
+shape circle = new shape("Circle", "Red", 3);
+
+circle.area();
 
 
-Console.WriteLine(
-    $"Hello, choose a car! " +
-    "\nPress 1. to choose a petrol powered car " +
-    "\nPress 2. to choose a disel powered car" +
-    "\nPress 3. to choose an electric powered car");
-choice = int.Parse(Console.ReadLine());
 
-if (choice == 1)
-{
-    Car petrolCar = new Car(Fuels.Gasoline, CarFuelType.PetrolCar, 0);
-    Console.Clear();
-    if (petrolCar.Fuel == 0) { 
-        Console.WriteLine($"You need to refuel your car first!" +
-            $"\npress R to refuel");
-        refuel = Console.ReadKey().KeyChar;
-        Console.Clear();
-        if (refuel == 'r' || refuel == 'R')
-        {
-            petrolCar.refuel();
-            Console.WriteLine("press D to drive");
-            drive = Console.ReadKey().KeyChar;
-            Console.Clear();
-            if (drive == 'd' || drive == 'D')
-            {
-                petrolCar.Drive();
-            }
-            else
-            {
-                Console.WriteLine("Invalid input, please try again.");
-            }
-        }
-        else
-        {
-            Console.WriteLine("Invalid input, please try again.");
-        }
-    }
-    else
-    {
-        Console.WriteLine("Invalid input, please try again.");
-    }
-}
 
-     if (choice == 2)
-{
-    Car dieselCar = new Car(Fuels.Diesel, CarFuelType.DieselCar, 0);
-    Console.Clear();
-    if (dieselCar.Fuel == 0)
-    {
-        Console.WriteLine($"You need to refuel your car first!" +
-            $"\npress R to refuel");
-        refuel = Console.ReadKey().KeyChar;
-        Console.Clear();
-        if (refuel == 'r' || refuel == 'R')
-        {
-            dieselCar.refuel();
-            Console.WriteLine("press D to drive");
-            drive = Console.ReadKey().KeyChar;
-            Console.Clear();
-            if (drive == 'd' || drive == 'D')
-            {
-                dieselCar.Drive();
-            }
-            else
-            {
-                Console.WriteLine("Invalid input, please try again.");
-            }
-        }
-        else
-        {
-            Console.WriteLine("Invalid input, please try again.");
-        }
-    }
-    else
-    {
-        Console.WriteLine("Invalid input, please try again.");
-    }
-}
-else if (choice == 3)
-{
-    Car electricCar = new Car(Fuels.Electric, CarFuelType.ElectricCar, 0);
-    Console.Clear();
-    if (electricCar.Fuel == 0)
-    {
-        Console.WriteLine($"You need to charge your car first!" +
-            $"\npress R to charge");
-        refuel = Console.ReadKey().KeyChar;
-        Console.Clear();
-        if (refuel == 'r' || refuel == 'R')
-        {
-            electricCar.refuel();
-            Console.WriteLine("press D to drive");
-            drive = Console.ReadKey().KeyChar;
-            Console.Clear();
-            if (drive == 'd' || drive == 'D')
-            {
-                electricCar.Drive();
-            }
-            else
-            {
-                Console.WriteLine("Invalid input, please try again.");
-            }
-        }
-        else
-        {
-            Console.WriteLine("Invalid input, please try again.");
-        }
-    }
-    else
-    {
-        Console.WriteLine("Invalid input, please try again.");
-    }
-}
-else
-{
-    Console.WriteLine("Invalid choice");
-}
+//                                 9th les HW
+
+//using hwC_Step.Models;
+//using hwC_Step.Enums;
+
+//int choice;
+//char refuel;
+//char drive;
+
+
+//Console.WriteLine(
+//    $"Hello, choose a car! " +
+//    "\nPress 1. to choose a petrol powered car " +
+//    "\nPress 2. to choose a disel powered car" +
+//    "\nPress 3. to choose an electric powered car");
+//choice = int.Parse(Console.ReadLine());
+
+//if (choice == 1)
+//{
+//    Car petrolCar = new Car(Fuels.Gasoline, CarFuelType.PetrolCar, 0);
+//    Console.Clear();
+//    if (petrolCar.Fuel == 0) { 
+//        Console.WriteLine($"You need to refuel your car first!" +
+//            $"\npress R to refuel");
+//        refuel = Console.ReadKey().KeyChar;
+//        Console.Clear();
+//        if (refuel == 'r' || refuel == 'R')
+//        {
+//            petrolCar.refuel();
+//            Console.WriteLine("press D to drive");
+//            drive = Console.ReadKey().KeyChar;
+//            Console.Clear();
+//            if (drive == 'd' || drive == 'D')
+//            {
+//                petrolCar.Drive();
+//            }
+//            else
+//            {
+//                Console.WriteLine("Invalid input, please try again.");
+//            }
+//        }
+//        else
+//        {
+//            Console.WriteLine("Invalid input, please try again.");
+//        }
+//    }
+//    else
+//    {
+//        Console.WriteLine("Invalid input, please try again.");
+//    }
+//}
+
+//     if (choice == 2)
+//{
+//    Car dieselCar = new Car(Fuels.Diesel, CarFuelType.DieselCar, 0);
+//    Console.Clear();
+//    if (dieselCar.Fuel == 0)
+//    {
+//        Console.WriteLine($"You need to refuel your car first!" +
+//            $"\npress R to refuel");
+//        refuel = Console.ReadKey().KeyChar;
+//        Console.Clear();
+//        if (refuel == 'r' || refuel == 'R')
+//        {
+//            dieselCar.refuel();
+//            Console.WriteLine("press D to drive");
+//            drive = Console.ReadKey().KeyChar;
+//            Console.Clear();
+//            if (drive == 'd' || drive == 'D')
+//            {
+//                dieselCar.Drive();
+//            }
+//            else
+//            {
+//                Console.WriteLine("Invalid input, please try again.");
+//            }
+//        }
+//        else
+//        {
+//            Console.WriteLine("Invalid input, please try again.");
+//        }
+//    }
+//    else
+//    {
+//        Console.WriteLine("Invalid input, please try again.");
+//    }
+//}
+//else if (choice == 3)
+//{
+//    Car electricCar = new Car(Fuels.Electric, CarFuelType.ElectricCar, 0);
+//    Console.Clear();
+//    if (electricCar.Fuel == 0)
+//    {
+//        Console.WriteLine($"You need to charge your car first!" +
+//            $"\npress R to charge");
+//        refuel = Console.ReadKey().KeyChar;
+//        Console.Clear();
+//        if (refuel == 'r' || refuel == 'R')
+//        {
+//            electricCar.refuel();
+//            Console.WriteLine("press D to drive");
+//            drive = Console.ReadKey().KeyChar;
+//            Console.Clear();
+//            if (drive == 'd' || drive == 'D')
+//            {
+//                electricCar.Drive();
+//            }
+//            else
+//            {
+//                Console.WriteLine("Invalid input, please try again.");
+//            }
+//        }
+//        else
+//        {
+//            Console.WriteLine("Invalid input, please try again.");
+//        }
+//    }
+//    else
+//    {
+//        Console.WriteLine("Invalid input, please try again.");
+//    }
+//}
+//else
+//{
+//    Console.WriteLine("Invalid choice");
+//}
 
 
 
