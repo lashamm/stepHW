@@ -1,15 +1,16 @@
 ﻿///                                10th les HW
-/// პირობა:
-/// 1. შექმენით აბსტრაქტული კლასი Shape (Area() მეთოდით)
-/// 2. შექმენით derived კლასები: Circle, Rectangle, Triangle
-/// 3. გამოიყენეთ პოლიმორფიზმი: შექმენით Shape მასივი და მასში
-/// დაამატეთ ფართობები Area() მეთოდით
 
+using hwC_Step.Enums;
 using hwC_Step.Models;
 
-shape circle = new shape("Circle", "Red", 3);
+Rectangle rectangle = new Rectangle("red", NamesOfShape.Rectangle, RectangleTypes.Square, 12);
+rectangle.area();
 
+Circle circle = new Circle("blue", NamesOfShape.Circle, CircleTypes.Full, 15);
 circle.area();
+
+Triangle triangle = new Triangle("green", NamesOfShape.Triangle, TriangleType.Equilateral, 20);
+triangle.area();
 
 
 
