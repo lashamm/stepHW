@@ -17,6 +17,5 @@ namespace hwC_Step._11th_les_stuff
             Console.WriteLine("Video is stopped");
         }
     }
-    {
+  
     }
-}

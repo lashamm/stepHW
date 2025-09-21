@@ -1,22 +1,102 @@
 ﻿//                                  11th les HW
 
+using hwC_Step._11th_les_stuff;
+
+int playerChoice;
+char controlChoice;
+
+Console.WriteLine("Choose your Player:" +
+    "\n If you want to play audio player press 1" +
+    "\n If you want to play video player press 2");
+playerChoice = int.Parse(Console.ReadLine());
+Console.Clear();
+if (playerChoice == 1)
+{
+    AudioPlayer audioPlayer = new AudioPlayer();
+    audioPlayer.Volume = 50;
+    audioPlayer.Play();
+    Console.WriteLine(
+        $"Audio Player Volume is set to: {audioPlayer.Volume}" +
+        $"\nif you want to pause it press 'P'," +
+        $"\nif you want to stop it press 'S'.");
+    if (char.TryParse(Console.ReadLine().ToLower(), out controlChoice))
+    {
+        if (controlChoice == 'p')
+        {
+            Console.Clear();
+            audioPlayer.Pause();
+        }
+        else if (controlChoice == 's')
+        {
+            Console.Clear();
+            audioPlayer.Stop();
+        }
+        else
+        {
+            Console.Clear();
+            Console.WriteLine("Invalid input");
+        }
+    }
+    else
+    {
+        Console.Clear();
+        Console.WriteLine("Invalid input");
+    }
+
+}
+else if (playerChoice == 2)
+{
+    VideoPlayer videoPlayer = new VideoPlayer();
+    videoPlayer.Volume = 50;
+    videoPlayer.Play();
+    Console.WriteLine(
+        $"Video Player Volume is set to: {videoPlayer.Volume}" +
+        $"\nif you want to pause it press 'P'," +
+        $"\nif you want to stop it press 'S'.");
+    if (char.TryParse(Console.ReadLine().ToLower(), out controlChoice))
+    {
+        if (controlChoice == 'p')
+        {
+            Console.Clear();
+            videoPlayer.Pause();
+        }
+        else if (controlChoice == 's')
+        {
+            Console.Clear();
+            videoPlayer.Stop();
+        }
+        else
+        {
+            Console.Clear();
+            Console.WriteLine("Invalid input");
+        }
+    }
+    else
+    {
+        Console.WriteLine("Invalid input");
+    }
+}
+else
+{
+    Console.WriteLine("Invalid choice");
+}
 
 
 
 
 ///                                10th les HW
 
-using hwC_Step.Enums;
-using hwC_Step.Models;
+//using hwC_Step.Enums;
+//using hwC_Step.Models;
 
-Rectangle rectangle = new Rectangle("red", NamesOfShape.Rectangle, RectangleTypes.Square, 12);
-rectangle.area();
+//Rectangle rectangle = new Rectangle("red", NamesOfShape.Rectangle, RectangleTypes.Square, 12);
+//rectangle.area();
 
-Circle circle = new Circle("blue", NamesOfShape.Circle, CircleTypes.Full, 15);
-circle.area();
+//Circle circle = new Circle("blue", NamesOfShape.Circle, CircleTypes.Full, 15);
+//circle.area();
 
-Triangle triangle = new Triangle("green", NamesOfShape.Triangle, TriangleType.Equilateral, 20);
-triangle.area();
+//Triangle triangle = new Triangle("green", NamesOfShape.Triangle, TriangleType.Equilateral, 20);
+//triangle.area();
 
 
 
