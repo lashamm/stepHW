@@ -1,85 +1,183 @@
-﻿//                                  11th les HW
+﻿///                           12th les 3 HW
+///                           
 
-using hwC_Step._11th_les_stuff;
 
-int playerChoice;
-char controlChoice;
 
-Console.WriteLine("Choose your Player:" +
-    "\n If you want to play audio player press 1" +
-    "\n If you want to play video player press 2");
-playerChoice = int.Parse(Console.ReadLine());
-Console.Clear();
-if (playerChoice == 1)
-{
-    AudioPlayer audioPlayer = new AudioPlayer();
-    audioPlayer.Volume = 50;
-    audioPlayer.Play();
-    Console.WriteLine(
-        $"Audio Player Volume is set to: {audioPlayer.Volume}" +
-        $"\nif you want to pause it press 'P'," +
-        $"\nif you want to stop it press 'S'.");
-    if (char.TryParse(Console.ReadLine().ToLower(), out controlChoice))
-    {
-        if (controlChoice == 'p')
-        {
-            Console.Clear();
-            audioPlayer.Pause();
-        }
-        else if (controlChoice == 's')
-        {
-            Console.Clear();
-            audioPlayer.Stop();
-        }
-        else
-        {
-            Console.Clear();
-            Console.WriteLine("Invalid input");
-        }
-    }
-    else
-    {
-        Console.Clear();
-        Console.WriteLine("Invalid input");
-    }
+//static void Main()
+//{
+//    try
+//    {
+//        Console.Write("Enter num: ");
+//        int x = Convert.ToInt32(Console.ReadLine());
 
-}
-else if (playerChoice == 2)
-{
-    VideoPlayer videoPlayer = new VideoPlayer();
-    videoPlayer.Volume = 50;
-    videoPlayer.Play();
-    Console.WriteLine(
-        $"Video Player Volume is set to: {videoPlayer.Volume}" +
-        $"\nif you want to pause it press 'P'," +
-        $"\nif you want to stop it press 'S'.");
-    if (char.TryParse(Console.ReadLine().ToLower(), out controlChoice))
-    {
-        if (controlChoice == 'p')
-        {
-            Console.Clear();
-            videoPlayer.Pause();
-        }
-        else if (controlChoice == 's')
-        {
-            Console.Clear();
-            videoPlayer.Stop();
-        }
-        else
-        {
-            Console.Clear();
-            Console.WriteLine("Invalid input");
-        }
-    }
-    else
-    {
-        Console.WriteLine("Invalid input");
-    }
-}
-else
-{
-    Console.WriteLine("Invalid choice");
-}
+//        Console.Write("Enter seperator: ");
+//        int y = Convert.ToInt32(Console.ReadLine());
+
+//        int z = x / y;
+//        Console.WriteLine($"Result: {z}");
+//    }
+//    catch (DivideByZeroException)
+//    {
+//        Console.WriteLine("Cannot divide by zero (caught by catch)");
+//    }
+//    finally
+//    {
+//        Console.WriteLine("This code will always be executed (finally).");
+//    }
+//}
+
+//Main();
+
+
+
+
+
+
+///                           12th les 2 HW
+
+
+//static int GetStringLength(string text)
+//{
+//    try
+//    {
+//        return text.Length;
+//    }
+//    catch (NullReferenceException)
+//    {
+//        Console.WriteLine("Enter text");
+//        return -1;
+//    }
+//}
+
+//static void Main()
+//{
+//    Console.Write("Enter text: ");
+//    string input = Console.ReadLine();
+
+//    // If user just presses Enter, we’ll treat it as null
+//    if (string.IsNullOrEmpty(input))
+//        input = null;
+
+//    Console.WriteLine("Length: " + GetStringLength(input));
+//}
+
+//Main();
+
+///                           12th les 1 HW
+///                           
+
+
+//static int GetElement(int[] arr, int index)
+//{
+//    try
+//    {
+//        return arr[index];
+//    }
+//    catch (IndexOutOfRangeException e)
+//    {
+//        Console.WriteLine("Wrong! Index is wrong " + e.Message);
+//        return -1;
+//    }
+//}
+
+//static void Main()
+//{
+//    int[] numbers = { 10, 20, 30 };
+
+//    Console.Write("Enter index: ");
+//    int index = Convert.ToInt32(Console.ReadLine());
+
+//    Console.WriteLine("El in index [" + index + "]: " + GetElement(numbers, index));
+//}
+
+//Main();
+
+
+
+
+
+//                                  11th les HW
+
+//using hwC_Step._11th_les_stuff;
+
+//int playerChoice;
+//char controlChoice;
+
+//Console.WriteLine("Choose your Player:" +
+//    "\n If you want to play audio player press 1" +
+//    "\n If you want to play video player press 2");
+//playerChoice = int.Parse(Console.ReadLine());
+//Console.Clear();
+//if (playerChoice == 1)
+//{
+//    AudioPlayer audioPlayer = new AudioPlayer();
+//    audioPlayer.Volume = 50;
+//    audioPlayer.Play();
+//    Console.WriteLine(
+//        $"Audio Player Volume is set to: {audioPlayer.Volume}" +
+//        $"\nif you want to pause it press 'P'," +
+//        $"\nif you want to stop it press 'S'.");
+//    if (char.TryParse(Console.ReadLine().ToLower(), out controlChoice))
+//    {
+//        if (controlChoice == 'p')
+//        {
+//            Console.Clear();
+//            audioPlayer.Pause();
+//        }
+//        else if (controlChoice == 's')
+//        {
+//            Console.Clear();
+//            audioPlayer.Stop();
+//        }
+//        else
+//        {
+//            Console.Clear();
+//            Console.WriteLine("Invalid input");
+//        }
+//    }
+//    else
+//    {
+//        Console.Clear();
+//        Console.WriteLine("Invalid input");
+//    }
+
+//}
+//else if (playerChoice == 2)
+//{
+//    VideoPlayer videoPlayer = new VideoPlayer();
+//    videoPlayer.Volume = 50;
+//    videoPlayer.Play();
+//    Console.WriteLine(
+//        $"Video Player Volume is set to: {videoPlayer.Volume}" +
+//        $"\nif you want to pause it press 'P'," +
+//        $"\nif you want to stop it press 'S'.");
+//    if (char.TryParse(Console.ReadLine().ToLower(), out controlChoice))
+//    {
+//        if (controlChoice == 'p')
+//        {
+//            Console.Clear();
+//            videoPlayer.Pause();
+//        }
+//        else if (controlChoice == 's')
+//        {
+//            Console.Clear();
+//            videoPlayer.Stop();
+//        }
+//        else
+//        {
+//            Console.Clear();
+//            Console.WriteLine("Invalid input");
+//        }
+//    }
+//    else
+//    {
+//        Console.WriteLine("Invalid input");
+//    }
+//}
+//else
+//{
+//    Console.WriteLine("Invalid choice");
+//}
 
 
 
