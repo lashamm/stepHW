@@ -54,7 +54,6 @@
 //    Console.Write("Enter text: ");
 //    string input = Console.ReadLine();
 
-//    // If user just presses Enter, we’ll treat it as null
 //    if (string.IsNullOrEmpty(input))
 //        input = null;
 
