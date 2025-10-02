@@ -1,4 +1,96 @@
-﻿///                           12th les 3 HW
+﻿using System.Collections;
+using System.IO.Pipes;
+///                                  13th les HW
+///
+///      Non - Generic Collection 1. შექმენი კონსოლ აპლიკაცია, რომელიც: 
+///      • გამოიყენებს ArrayList, Stack, Queue, Hashtable და SortedList კოლექციებს. 
+///      • თითო კოლექციის მაგალითი უნდა იყოს პრაქტიკულ სიტუაციაზე დაფუძნებული 
+///      (მაგ., მაღაზიის პროდუქციის სია, ქულების Stack, მომხმარებელთა რიგი და ა.შ.)
+
+
+Console.WriteLine("Press 1 for first HW" +
+    "Press 2 for second HW" +
+    "Press 3 dor third HW" +
+    "Press 4 for forth HW");
+
+int choice = int.Parse(Console.ReadLine());
+Console.Clear();
+
+if (choice == 1)
+{
+    ArrayList products = new ArrayList();
+    products.Add("Apple");
+    products.Add("Banana");
+    products.Add("Orange");
+    products.Add("Grapes");
+    products.Add("Mango");
+    products.Add("Pineapple");
+
+    for (int i = 0; i < products.Count; i++)
+    {
+        Console.WriteLine(products[i]);
+    }
+}
+else if (choice == 2)
+{
+    Stack stack = new Stack();
+
+    stack.Push("First");
+    stack.Push("Second");
+    stack.Push("Third");
+    stack.Push("Fourth");
+    stack.Push("Fifth");
+
+    Console.WriteLine(stack.Pop());
+    Console.WriteLine(stack.Peek());
+
+}
+else if (choice == 3)
+{
+
+    Queue queue = new Queue();
+    queue.Enqueue("Customer 1");
+    queue.Enqueue("Customer 2");
+    queue.Enqueue("Customer 3");
+    queue.Enqueue("Customer 4");
+    queue.Enqueue("Customer 5");
+
+    Console.WriteLine(queue.Peek());
+    Console.WriteLine(queue.Dequeue());
+
+
+}
+else if(choice == 4)
+{
+    Hashtable hashtable = new Hashtable();
+
+    hashtable.Add(1, "John");
+    hashtable.Add(2, "Jane");
+    hashtable.Add(3, "Alice");
+    hashtable.Add(4, "Bob");
+    hashtable.Add(5, "Charlie");
+
+    hashtable[3] = "Eve";
+
+    Console.WriteLine(hashtable[3]);
+}
+else
+{
+    Console.WriteLine("Invalid choice");
+}
+
+///       sortedList არ აგვიხსნია მას :(
+
+
+
+
+
+
+
+
+
+
+///                           12th les 3 HW
 ///                           
 
 
