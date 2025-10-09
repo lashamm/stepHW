@@ -1,5 +1,63 @@
-﻿using System.Collections;
-using System.IO.Pipes;
+﻿
+using System.Reflection.Emit;
+using hwC_Step;
+
+///                                14th les HW
+///                            დავალების აღწერა:
+///                               Generic 
+///  1. შექმენით Pair<T1, T2> Generic კლასი
+///  · შეინახოს ორი ტიპის მნიშვნელობა. 
+///  · ჰქონდეს კონსტრუქტორი და მეთოდი Print(). 
+///  2. Generic მეთოდი, რომელიც აბრუნებს 
+///  მინიმუმს public T Min<T>(T a, T b) where T : IComparable<T>     
+
+
+
+
+
+
+
+
+
+//class Pair<T1, T2> { 
+//    public T1 First { get; set; }
+//    public T2 Second { get; set; }
+
+//    public Pair(T1 first, T2 second)
+//    {
+//        First = first;
+//        Second = second;
+//    }
+
+//    public void Print() { 
+//        Console.WriteLine($"First: {First}, Second: {Second}");
+//    }
+
+//}
+
+
+//T Min<T>(T a, T b) where T : IComparable<T>
+//{
+//    return a.CompareTo(b) < 0 ? a : b;
+//}
+
+//Console.WriteLine(Min(5,2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ///                                  13th les HW
 ///
 ///      Non - Generic Collection 1. შექმენი კონსოლ აპლიკაცია, რომელიც: 
@@ -8,76 +66,76 @@ using System.IO.Pipes;
 ///      (მაგ., მაღაზიის პროდუქციის სია, ქულების Stack, მომხმარებელთა რიგი და ა.შ.)
 
 
-Console.WriteLine("Press 1 for first HW" +
-    "Press 2 for second HW" +
-    "Press 3 dor third HW" +
-    "Press 4 for forth HW");
+//Console.WriteLine("Press 1 for first HW" +
+//    "Press 2 for second HW" +
+//    "Press 3 dor third HW" +
+//    "Press 4 for forth HW");
 
-int choice = int.Parse(Console.ReadLine());
-Console.Clear();
+//int choice = int.Parse(Console.ReadLine());
+//Console.Clear();
 
-if (choice == 1)
-{
-    ArrayList products = new ArrayList();
-    products.Add("Apple");
-    products.Add("Banana");
-    products.Add("Orange");
-    products.Add("Grapes");
-    products.Add("Mango");
-    products.Add("Pineapple");
+//if (choice == 1)
+//{
+//    ArrayList products = new ArrayList();
+//    products.Add("Apple");
+//    products.Add("Banana");
+//    products.Add("Orange");
+//    products.Add("Grapes");
+//    products.Add("Mango");
+//    products.Add("Pineapple");
 
-    for (int i = 0; i < products.Count; i++)
-    {
-        Console.WriteLine(products[i]);
-    }
-}
-else if (choice == 2)
-{
-    Stack stack = new Stack();
+//    for (int i = 0; i < products.Count; i++)
+//    {
+//        Console.WriteLine(products[i]);
+//    }
+//}
+//else if (choice == 2)
+//{
+//    Stack stack = new Stack();
 
-    stack.Push("First");
-    stack.Push("Second");
-    stack.Push("Third");
-    stack.Push("Fourth");
-    stack.Push("Fifth");
+//    stack.Push("First");
+//    stack.Push("Second");
+//    stack.Push("Third");
+//    stack.Push("Fourth");
+//    stack.Push("Fifth");
 
-    Console.WriteLine(stack.Pop());
-    Console.WriteLine(stack.Peek());
+//    Console.WriteLine(stack.Pop());
+//    Console.WriteLine(stack.Peek());
 
-}
-else if (choice == 3)
-{
+//}
+//else if (choice == 3)
+//{
 
-    Queue queue = new Queue();
-    queue.Enqueue("Customer 1");
-    queue.Enqueue("Customer 2");
-    queue.Enqueue("Customer 3");
-    queue.Enqueue("Customer 4");
-    queue.Enqueue("Customer 5");
+//    Queue queue = new Queue();
+//    queue.Enqueue("Customer 1");
+//    queue.Enqueue("Customer 2");
+//    queue.Enqueue("Customer 3");
+//    queue.Enqueue("Customer 4");
+//    queue.Enqueue("Customer 5");
 
-    Console.WriteLine(queue.Peek());
-    Console.WriteLine(queue.Dequeue());
+//    Console.WriteLine(queue.Peek());
+//    Console.WriteLine(queue.Dequeue());
 
 
-}
-else if(choice == 4)
-{
-    Hashtable hashtable = new Hashtable();
+//}
+//else if(choice == 4)
+//{
+//    Hashtable hashtable = new Hashtable();
 
-    hashtable.Add(1, "John");
-    hashtable.Add(2, "Jane");
-    hashtable.Add(3, "Alice");
-    hashtable.Add(4, "Bob");
-    hashtable.Add(5, "Charlie");
+//    hashtable.Add(1, "John");
+//    hashtable.Add(2, "Jane");
+//    hashtable.Add(3, "Alice");
+//    hashtable.Add(4, "Bob");
+//    hashtable.Add(5, "Charlie");
 
-    hashtable[3] = "Eve";
+//    hashtable[3] = "Eve";
 
-    Console.WriteLine(hashtable[3]);
-}
-else
-{
-    Console.WriteLine("Invalid choice");
-}
+//    Console.WriteLine(hashtable[3]);
+//}
+//else
+//{
+//    Console.WriteLine("Invalid choice");
+//}
 
 ///       sortedList არ აგვიხსნია მას :(
 
