@@ -1,6 +1,12 @@
 ﻿
-using System.Reflection.Emit;
-using hwC_Step;
+
+
+
+
+
+
+//using System.Reflection.Emit;
+//using hwC_Step;
 
 ///                                14th les HW
 ///                            დავალების აღწერა:
@@ -11,15 +17,8 @@ using hwC_Step;
 ///  2. Generic მეთოდი, რომელიც აბრუნებს 
 ///  მინიმუმს public T Min<T>(T a, T b) where T : IComparable<T>     
 
-
-
-
-
-
-
-
-
-//class Pair<T1, T2> { 
+//class Pair<T1, T2>
+//{
 //    public T1 First { get; set; }
 //    public T2 Second { get; set; }
 
@@ -29,19 +28,21 @@ using hwC_Step;
 //        Second = second;
 //    }
 
-//    public void Print() { 
+//    public void Print()
+//    {
 //        Console.WriteLine($"First: {First}, Second: {Second}");
 //    }
 
 //}
 
+////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 //T Min<T>(T a, T b) where T : IComparable<T>
 //{
 //    return a.CompareTo(b) < 0 ? a : b;
 //}
 
-//Console.WriteLine(Min(5,2));
+//Console.WriteLine(Min(5, 2));
 
 
 
