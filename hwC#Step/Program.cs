@@ -1,4 +1,48 @@
-﻿using System;
+﻿///                                          16th les HW
+///                                           ლამბდას სავარჯიშოები 
+/// 1. დაწერეთ ლამბდა, რომელიც იღებს რიცხვების სიას და აბრუნებს მათ კვადრატების სიას. 
+/// 2. შექმენით ლამბდა, რომელიც ლექსიკონიდან (Dictionary<string, int>)
+/// აბრუნებს იმ ელემენტებს, რომელთა მნიშვნელობა მეტია 10-ზე   
+///                                                    1.
+///                                                    
+//List<double> numberList = [2, 3, 7, 5, 12];
+//Func<List<double>, List<double>> squares = numbers =>
+//{
+//    List<double> result = new List<double>();
+//    foreach (var number in numbers)
+//    {
+//        result.Add(Math.Pow(number, 2));
+//    }
+//    return result;
+//};
+//List<double> squaresResult = squares(numberList);
+
+//foreach (var value in squaresResult)
+//{
+//    Console.WriteLine(value);
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//using System;
 
 ///                                  15th les HW
 ///                                   Delegates 
@@ -10,28 +54,28 @@
 /// რომელიც იღებს ორ მთელ რიცხვს და აბრუნებს განსხვავებას; 
 /// · დაწერეთ პროგრამა, რომელიც ამ delegate-ს იყენებს როგორც ცვლადს.
 
-string a = "hello";
-string b = "hello world";
-string c = "mAkE thIS UpPeRCAsE";
+//string a = "hello";
+//string b = "hello world";
+//string c = "mAkE thIS UpPeRCAsE";
 
-Predicate<string> predocate = s => s.Length > 5;
-Console.WriteLine(predocate(a));
-Console.WriteLine(predocate(b));
-Action<string> action = s => Console.WriteLine(s.ToUpper());
-action(c);
-
-
-MyDelegate myDelegate = diff;
-Console.WriteLine(myDelegate(2, 3));
-static int diff(int x, int y)
-{
-    int difference;
-    difference = y - x;
-    return difference;
-}
+//Predicate<string> predocate = s => s.Length > 5;
+//Console.WriteLine(predocate(a));
+//Console.WriteLine(predocate(b));
+//Action<string> action = s => Console.WriteLine(s.ToUpper());
+//action(c);
 
 
-delegate int MyDelegate(int x, int y);
+//MyDelegate myDelegate = diff;
+//Console.WriteLine(myDelegate(2, 3));
+//static int diff(int x, int y)
+//{
+//    int difference;
+//    difference = y - x;
+//    return difference;
+//}
+
+
+//delegate int MyDelegate(int x, int y);
 
 ////////////////////////////////////////////////////////////////////////////////////////
 
