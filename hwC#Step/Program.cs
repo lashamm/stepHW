@@ -22,8 +22,36 @@
 //    Console.WriteLine(value);
 //}
 
+///                                                    2.
+///                                                    
 
 
+//Dictionary<int, string> dictionary = new Dictionary<int, string>()
+//{
+//    {5, "five"},
+//    {15, "fifteen"},
+//    {25, "twenty five"},
+//    {8, "eight"}
+//};
+
+//string result = string.Empty;
+
+//Action<string> action = s =>
+//{
+//    foreach (var item in dictionary)
+//    {
+
+//        if (item.Key > 10)
+//        {
+//            result = item.Value;
+//            Console.WriteLine(result);
+            
+//        }
+        
+//    }
+//};
+
+//action("some value");
 
 
 
