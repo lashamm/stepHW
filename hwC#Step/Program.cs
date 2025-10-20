@@ -1,4 +1,68 @@
-﻿///                                          16th les HW
+﻿using hwC_Step;
+
+///                                         17th les HW
+///                                         დავალების აღწერა:
+///          Student - ების სიიდან წამოიღეთ ის სტუდენტები, რომელთა: 
+///          1.ქულაც 5 - ზე მეტია. 2.ქალაქიც იწყება 'a'- ზე
+
+
+
+List<Student> students = new List<Student>
+{
+    new Student { Name = "Alice Johnson", Age = 16, Grade = 10, City = "New York" },
+    new Student { Name = "Benjamin Lee", Age = 17, Grade = 11, City = "Los Angeles" },
+    new Student { Name = "Charlotte Smith", Age = 15, Grade = 9, City = "Chicago" },
+    new Student { Name = "Daniel Brown", Age = 18, Grade = 12, City = "New York" },  
+    new Student { Name = "Ella Davis", Age = 16, Grade = 10, City = "Phoenix" },
+    new Student { Name = "Frank Miller", Age = 17, Grade = 11, City = "Los Angeles" },   
+    new Student { Name = "Grace Wilson", Age = 15, Grade = 9, City = "San Antonio" },
+    new Student { Name = "Henry Moore", Age = 18, Grade = 12, City = "Chicago" },        
+    new Student { Name = "Isabella Taylor", Age = 16, Grade = 10, City = "Dallas" },
+    new Student { Name = "Jack Anderson", Age = 17, Grade = 11, City = "San Jose" },
+    new Student { Name = "Katherine Thomas", Age = 15, Grade = 9, City = "Austin" },
+    new Student { Name = "Liam Martinez", Age = 18, Grade = 12, City = "Phoenix" },         
+    new Student { Name = "Mia Robinson", Age = 16, Grade = 10, City = "San Antonio" },     
+    new Student { Name = "Noah Clark", Age = 17, Grade = 11, City = "Dallas" }              
+};
+
+var orderedByAge = students.OrderByDescending(x => x.Age);
+Print(orderedByAge);
+
+Console.WriteLine("==============================");
+
+var isAllAdult = students.All(s => s.Age >= 18);
+Console.WriteLine(isAllAdult);
+
+Console.WriteLine("==============================");
+
+var gradeAbove5 = students.Where(a => a.Grade > 5);
+Print(gradeAbove5);
+
+Console.WriteLine("==============================");
+var cityStartsWithA = students.Where(a => a.City.StartsWith("a", StringComparison.OrdinalIgnoreCase));
+Print(cityStartsWithA);
+
+static void Print<T>(IEnumerable<T> collection)
+{
+    foreach (var item in collection)
+    {
+        Console.WriteLine(item);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+///                                          16th les HW
 ///                                           ლამბდას სავარჯიშოები 
 /// 1. დაწერეთ ლამბდა, რომელიც იღებს რიცხვების სიას და აბრუნებს მათ კვადრატების სიას. 
 /// 2. შექმენით ლამბდა, რომელიც ლექსიკონიდან (Dictionary<string, int>)
@@ -45,9 +109,9 @@
 //        {
 //            result = item.Value;
 //            Console.WriteLine(result);
-            
+
 //        }
-        
+
 //    }
 //};
 
