@@ -40,6 +40,40 @@ List<Product> products = new List<Product>
     new Product { Id = 30, Name = "Electric Kettle", Category = "Kitchenware", Description = "1.7L electric kettle", Price = 29.99m },
 };
 
+List<User> users = new List<User>
+{
+    new User { Age = 25, Name = "Alice" },
+    new User { Age = 30, Name = "Bob" },
+    new User { Age = 22, Name = "Charlie" },
+    new User { Age = 35, Name = "Diana" },
+    new User { Age = 28, Name = "Eve" },
+    new User { Age = 33, Name = "Frank" },
+    new User { Age = 17, Name = "Grace" },
+    new User { Age = 31, Name = "Henry" },
+    new User { Age = 14, Name = "Iris" },
+    new User { Age = 29, Name = "Jack" },
+    new User { Age = 16, Name = "Karen" },
+    new User { Age = 34, Name = "Liam" },
+    new User { Age = 23, Name = "Mia" },
+    new User { Age = 32, Name = "Noah" },
+    new User { Age = 21, Name = "Olivia" },
+    new User { Age = 36, Name = "Paul" },
+    new User { Age = 28, Name = "Quinn" },
+    new User { Age = 30, Name = "Rachel" },
+    new User { Age = 25, Name = "Sam" },
+    new User { Age = 17, Name = "Tina" },
+    new User { Age = 33, Name = "Ulysses" },
+    new User { Age = 19, Name = "Vera" },
+    new User { Age = 31, Name = "Walter" },
+    new User { Age = 26, Name = "Xena" },
+    new User { Age = 24, Name = "Yuri" },
+    new User { Age = 15, Name = "Zoe" },
+    new User { Age = 12, Name = "Aaron" },
+    new User { Age = 28, Name = "Bella" },
+    new User { Age = 12, Name = "Chris" },
+    new User { Age = 10, Name = "Daisy" }
+};
+
 //var groups = products.GroupBy(x => x.Category);
 
 //foreach (var group in groups)
@@ -69,7 +103,7 @@ UserId = rand.Next(100, 121)
 ///////
 var joinedItems = from o in orders
 join p in products on o.ProductId equals p.Id
-select new
+                  select new
 {
 Id = o.Id,
 PurchaseTime = o.PurchaseTime,
@@ -77,7 +111,11 @@ ProductName = p.Name,
 Category =p.Category,
 Description =p.Description,
 Price = p.Price,
-};
+                  };
+
+
+
+
 
 foreach (var item in joinedItems)
 {
@@ -94,6 +132,11 @@ var yesterday = DateTime.Now.AddDays(-1);
 // კატეგორია Electronics - ის პროდუქტები
 var uniqueProducts = products.DistinctBy(x => x.Category).Select(x => x.Category);
 ////////////////////////////////////
+///
+
+///        18+ buyers
+
+
 foreach (var product in uniqueProducts)
 {
 Console.WriteLine(product);
