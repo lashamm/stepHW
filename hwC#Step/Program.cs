@@ -1,146 +1,173 @@
-﻿using hwC_Step;
+﻿///                                 19th les HW
+///                                 
+
+using hwC_Step;
+
+//                                      1.
+//string text = "i miss lorem";
+//string text2 = "i need lorem in c#";
+
+//Console.WriteLine(text.wordcount());
+//Console.WriteLine(text2.wordcount());
 
 
-////                                    18th les HW
-///
+
+//                                     2.
 
 
 
-List<Product> products = new List<Product>
-{
-    new Product { Id = 1, Name = "Laptop", Category = "Electronics", Description = "High performance laptop", Price = 999.99m },
-    new Product { Id = 2, Name = "Headphones", Category = "Electronics", Description = "Noise-cancelling headphones", Price = 199.99m },
-    new Product { Id = 3, Name = "Coffee Mug", Category = "Kitchenware", Description = "Ceramic coffee mug", Price = 9.99m },
-    new Product { Id = 4, Name = "Office Chair", Category = "Furniture", Description = "Ergonomic office chair", Price = 149.99m },
-    new Product { Id = 5, Name = "Smartphone", Category = "Electronics", Description = "Latest model smartphone", Price = 699.99m },
-    new Product { Id = 6, Name = "Bluetooth Speaker", Category = "Electronics", Description = "Portable Bluetooth speaker", Price = 59.99m },
-    new Product { Id = 7, Name = "Notebook", Category = "Stationery", Description = "100-page ruled notebook", Price = 2.49m },
-    new Product { Id = 8, Name = "Desk Lamp", Category = "Furniture", Description = "LED desk lamp", Price = 29.99m },
-    new Product { Id = 9, Name = "Backpack", Category = "Accessories", Description = "Water-resistant backpack", Price = 49.99m },
-    new Product { Id = 10, Name = "Water Bottle", Category = "Kitchenware", Description = "Insulated water bottle", Price = 19.99m },
-    new Product { Id = 11, Name = "Monitor", Category = "Electronics", Description = "27-inch 4K monitor", Price = 299.99m },
-    new Product { Id = 12, Name = "Wireless Mouse", Category = "Electronics", Description = "Ergonomic wireless mouse", Price = 24.99m },
-    new Product { Id = 13, Name = "Keyboard", Category = "Electronics", Description = "Mechanical keyboard", Price = 89.99m },
-    new Product { Id = 14, Name = "Sneakers", Category = "Footwear", Description = "Running sneakers", Price = 79.99m },
-    new Product { Id = 15, Name = "Sunglasses", Category = "Accessories", Description = "UV protection sunglasses", Price = 39.99m },
-    new Product { Id = 16, Name = "T-shirt", Category = "Clothing", Description = "Cotton t-shirt", Price = 14.99m },
-    new Product { Id = 17, Name = "Jeans", Category = "Clothing", Description = "Denim jeans", Price = 49.99m },
-    new Product { Id = 18, Name = "Watch", Category = "Accessories", Description = "Digital wristwatch", Price = 129.99m },
-    new Product { Id = 19, Name = "Tablet", Category = "Electronics", Description = "10-inch tablet", Price = 399.99m },
-    new Product { Id = 20, Name = "Charger", Category = "Electronics", Description = "Fast USB charger", Price = 14.99m },
-    new Product { Id = 21, Name = "Flash Drive", Category = "Electronics", Description = "64GB USB flash drive", Price = 19.99m },
-    new Product { Id = 22, Name = "Camera", Category = "Electronics", Description = "Digital camera", Price = 249.99m },
-    new Product { Id = 23, Name = "Bookshelf", Category = "Furniture", Description = "Wooden bookshelf", Price = 89.99m },
-    new Product { Id = 24, Name = "Cookware Set", Category = "Kitchenware", Description = "10-piece cookware set", Price = 129.99m },
-    new Product { Id = 25, Name = "Blender", Category = "Kitchenware", Description = "High-speed blender", Price = 59.99m },
-    new Product { Id = 26, Name = "Yoga Mat", Category = "Fitness", Description = "Non-slip yoga mat", Price = 24.99m },
-    new Product { Id = 27, Name = "Dumbbells", Category = "Fitness", Description = "Set of 2 dumbbells", Price = 39.99m },
-    new Product { Id = 28, Name = "Running Shorts", Category = "Clothing", Description = "Lightweight running shorts", Price = 19.99m },
-    new Product { Id = 29, Name = "Baseball Cap", Category = "Accessories", Description = "Adjustable baseball cap", Price = 12.99m },
-    new Product { Id = 30, Name = "Electric Kettle", Category = "Kitchenware", Description = "1.7L electric kettle", Price = 29.99m },
-};
 
-List<User> users = new List<User>
-{
-    new User { Age = 25, Name = "Alice" },
-    new User { Age = 30, Name = "Bob" },
-    new User { Age = 22, Name = "Charlie" },
-    new User { Age = 35, Name = "Diana" },
-    new User { Age = 28, Name = "Eve" },
-    new User { Age = 33, Name = "Frank" },
-    new User { Age = 17, Name = "Grace" },
-    new User { Age = 31, Name = "Henry" },
-    new User { Age = 14, Name = "Iris" },
-    new User { Age = 29, Name = "Jack" },
-    new User { Age = 16, Name = "Karen" },
-    new User { Age = 34, Name = "Liam" },
-    new User { Age = 23, Name = "Mia" },
-    new User { Age = 32, Name = "Noah" },
-    new User { Age = 21, Name = "Olivia" },
-    new User { Age = 36, Name = "Paul" },
-    new User { Age = 28, Name = "Quinn" },
-    new User { Age = 30, Name = "Rachel" },
-    new User { Age = 25, Name = "Sam" },
-    new User { Age = 17, Name = "Tina" },
-    new User { Age = 33, Name = "Ulysses" },
-    new User { Age = 19, Name = "Vera" },
-    new User { Age = 31, Name = "Walter" },
-    new User { Age = 26, Name = "Xena" },
-    new User { Age = 24, Name = "Yuri" },
-    new User { Age = 15, Name = "Zoe" },
-    new User { Age = 12, Name = "Aaron" },
-    new User { Age = 28, Name = "Bella" },
-    new User { Age = 12, Name = "Chris" },
-    new User { Age = 10, Name = "Daisy" }
-};
 
-//var groups = products.GroupBy(x => x.Category);
 
-//foreach (var group in groups)
+
+
+
+
+
+
+//using hwC_Step.old;
+
+
+//////                                    18th les HW
+/////
+
+
+
+//List<Product> products = new List<Product>
 //{
-//Console.WriteLine(group.Key);
-//foreach (var item in group)
+//    new Product { Id = 1, Name = "Laptop", Category = "Electronics", Description = "High performance laptop", Price = 999.99m },
+//    new Product { Id = 2, Name = "Headphones", Category = "Electronics", Description = "Noise-cancelling headphones", Price = 199.99m },
+//    new Product { Id = 3, Name = "Coffee Mug", Category = "Kitchenware", Description = "Ceramic coffee mug", Price = 9.99m },
+//    new Product { Id = 4, Name = "Office Chair", Category = "Furniture", Description = "Ergonomic office chair", Price = 149.99m },
+//    new Product { Id = 5, Name = "Smartphone", Category = "Electronics", Description = "Latest model smartphone", Price = 699.99m },
+//    new Product { Id = 6, Name = "Bluetooth Speaker", Category = "Electronics", Description = "Portable Bluetooth speaker", Price = 59.99m },
+//    new Product { Id = 7, Name = "Notebook", Category = "Stationery", Description = "100-page ruled notebook", Price = 2.49m },
+//    new Product { Id = 8, Name = "Desk Lamp", Category = "Furniture", Description = "LED desk lamp", Price = 29.99m },
+//    new Product { Id = 9, Name = "Backpack", Category = "Accessories", Description = "Water-resistant backpack", Price = 49.99m },
+//    new Product { Id = 10, Name = "Water Bottle", Category = "Kitchenware", Description = "Insulated water bottle", Price = 19.99m },
+//    new Product { Id = 11, Name = "Monitor", Category = "Electronics", Description = "27-inch 4K monitor", Price = 299.99m },
+//    new Product { Id = 12, Name = "Wireless Mouse", Category = "Electronics", Description = "Ergonomic wireless mouse", Price = 24.99m },
+//    new Product { Id = 13, Name = "Keyboard", Category = "Electronics", Description = "Mechanical keyboard", Price = 89.99m },
+//    new Product { Id = 14, Name = "Sneakers", Category = "Footwear", Description = "Running sneakers", Price = 79.99m },
+//    new Product { Id = 15, Name = "Sunglasses", Category = "Accessories", Description = "UV protection sunglasses", Price = 39.99m },
+//    new Product { Id = 16, Name = "T-shirt", Category = "Clothing", Description = "Cotton t-shirt", Price = 14.99m },
+//    new Product { Id = 17, Name = "Jeans", Category = "Clothing", Description = "Denim jeans", Price = 49.99m },
+//    new Product { Id = 18, Name = "Watch", Category = "Accessories", Description = "Digital wristwatch", Price = 129.99m },
+//    new Product { Id = 19, Name = "Tablet", Category = "Electronics", Description = "10-inch tablet", Price = 399.99m },
+//    new Product { Id = 20, Name = "Charger", Category = "Electronics", Description = "Fast USB charger", Price = 14.99m },
+//    new Product { Id = 21, Name = "Flash Drive", Category = "Electronics", Description = "64GB USB flash drive", Price = 19.99m },
+//    new Product { Id = 22, Name = "Camera", Category = "Electronics", Description = "Digital camera", Price = 249.99m },
+//    new Product { Id = 23, Name = "Bookshelf", Category = "Furniture", Description = "Wooden bookshelf", Price = 89.99m },
+//    new Product { Id = 24, Name = "Cookware Set", Category = "Kitchenware", Description = "10-piece cookware set", Price = 129.99m },
+//    new Product { Id = 25, Name = "Blender", Category = "Kitchenware", Description = "High-speed blender", Price = 59.99m },
+//    new Product { Id = 26, Name = "Yoga Mat", Category = "Fitness", Description = "Non-slip yoga mat", Price = 24.99m },
+//    new Product { Id = 27, Name = "Dumbbells", Category = "Fitness", Description = "Set of 2 dumbbells", Price = 39.99m },
+//    new Product { Id = 28, Name = "Running Shorts", Category = "Clothing", Description = "Lightweight running shorts", Price = 19.99m },
+//    new Product { Id = 29, Name = "Baseball Cap", Category = "Accessories", Description = "Adjustable baseball cap", Price = 12.99m },
+//    new Product { Id = 30, Name = "Electric Kettle", Category = "Kitchenware", Description = "1.7L electric kettle", Price = 29.99m },
+//};
+
+//List<User> users = new List<User>
 //{
-//Console.WriteLine("\t" + item.Name);
+//    new User { Age = 25, Name = "Alice" },
+//    new User { Age = 30, Name = "Bob" },
+//    new User { Age = 22, Name = "Charlie" },
+//    new User { Age = 35, Name = "Diana" },
+//    new User { Age = 28, Name = "Eve" },
+//    new User { Age = 33, Name = "Frank" },
+//    new User { Age = 17, Name = "Grace" },
+//    new User { Age = 31, Name = "Henry" },
+//    new User { Age = 14, Name = "Iris" },
+//    new User { Age = 29, Name = "Jack" },
+//    new User { Age = 16, Name = "Karen" },
+//    new User { Age = 34, Name = "Liam" },
+//    new User { Age = 23, Name = "Mia" },
+//    new User { Age = 32, Name = "Noah" },
+//    new User { Age = 21, Name = "Olivia" },
+//    new User { Age = 36, Name = "Paul" },
+//    new User { Age = 28, Name = "Quinn" },
+//    new User { Age = 30, Name = "Rachel" },
+//    new User { Age = 25, Name = "Sam" },
+//    new User { Age = 17, Name = "Tina" },
+//    new User { Age = 33, Name = "Ulysses" },
+//    new User { Age = 19, Name = "Vera" },
+//    new User { Age = 31, Name = "Walter" },
+//    new User { Age = 26, Name = "Xena" },
+//    new User { Age = 24, Name = "Yuri" },
+//    new User { Age = 15, Name = "Zoe" },
+//    new User { Age = 12, Name = "Aaron" },
+//    new User { Age = 28, Name = "Bella" },
+//    new User { Age = 12, Name = "Chris" },
+//    new User { Age = 10, Name = "Daisy" }
+//};
+
+////var groups = products.GroupBy(x => x.Category);
+
+////foreach (var group in groups)
+////{
+////Console.WriteLine(group.Key);
+////foreach (var item in group)
+////{
+////Console.WriteLine("\t" + item.Name);
+////}
+////}
+
+//List<Order> orders = new List<Order>();
+
+//Random rand = new Random();
+//DateTime startDate = DateTime.Now.AddMonths(-3);
+
+//for (int i = 1; i <= 50; i++)
+//{
+//orders.Add(new Order
+//{
+//Id = i,
+//PurchaseTime = startDate.AddDays(rand.Next(1, 90)).AddHours(rand.Next(0, 24)).AddMinutes(rand.Next(0, 60)),
+//ProductId = rand.Next(1, 31),  
+//UserId = rand.Next(100, 121)   
+//});
 //}
+/////////
+//var joinedItems = from o in orders
+//join p in products on o.ProductId equals p.Id
+//                  select new
+//{
+//Id = o.Id,
+//PurchaseTime = o.PurchaseTime,
+//ProductName = p.Name,
+//Category =p.Category,
+//Description =p.Description,
+//Price = p.Price,
+//                  };
+
+
+
+
+
+//foreach (var item in joinedItems)
+//{
+////Console.WriteLine($"{item.PurchaseTime}, {item.ProductName}, {item.Description}");
 //}
 
-List<Order> orders = new List<Order>();
+//// პროდუქტის ფასი 50-ზე მეტია
+//var moreThan50 = products.Where(p => p.Price > 50);
 
-Random rand = new Random();
-DateTime startDate = DateTime.Now.AddMonths(-3);
+//// შეძენა გუშინ მოხდა
+//var yesterday = DateTime.Now.AddDays(-1);
+////Print(yesterday);
 
-for (int i = 1; i <= 50; i++)
-{
-orders.Add(new Order
-{
-Id = i,
-PurchaseTime = startDate.AddDays(rand.Next(1, 90)).AddHours(rand.Next(0, 24)).AddMinutes(rand.Next(0, 60)),
-ProductId = rand.Next(1, 31),  
-UserId = rand.Next(100, 121)   
-});
-}
-///////
-var joinedItems = from o in orders
-join p in products on o.ProductId equals p.Id
-                  select new
-{
-Id = o.Id,
-PurchaseTime = o.PurchaseTime,
-ProductName = p.Name,
-Category =p.Category,
-Description =p.Description,
-Price = p.Price,
-                  };
+//// კატეგორია Electronics - ის პროდუქტები
+//var uniqueProducts = products.DistinctBy(x => x.Category).Select(x => x.Category);
+//////////////////////////////////////
+/////
+
+/////        18+ buyers
 
 
-
-
-
-foreach (var item in joinedItems)
-{
-//Console.WriteLine($"{item.PurchaseTime}, {item.ProductName}, {item.Description}");
-}
-
-// პროდუქტის ფასი 50-ზე მეტია
-var moreThan50 = products.Where(p => p.Price > 50);
-
-// შეძენა გუშინ მოხდა
-var yesterday = DateTime.Now.AddDays(-1);
-//Print(yesterday);
-
-// კატეგორია Electronics - ის პროდუქტები
-var uniqueProducts = products.DistinctBy(x => x.Category).Select(x => x.Category);
-////////////////////////////////////
-///
-
-///        18+ buyers
-
-
-foreach (var product in uniqueProducts)
-{
-Console.WriteLine(product);
-}
+//foreach (var product in uniqueProducts)
+//{
+//Console.WriteLine(product);
+//}
 
 
 
