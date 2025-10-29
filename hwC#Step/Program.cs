@@ -4,26 +4,53 @@
 using hwC_Step;
 
 //                                      1.
-//string text = "i miss lorem";
-//string text2 = "i need lorem in c#";
 
-//Console.WriteLine(text.wordcount());
-//Console.WriteLine(text2.wordcount());
+
+string text = "i miss lorem";
+string text2 = "i need lorem in c#";
+
+Console.WriteLine(text.wordcount());
+Console.WriteLine(text2.wordcount());
+Console.WriteLine("////////////////////////////////////////////");
 
 
 
 //                                     2.
 
 
+var items = new List<string> { "apple", null, "banana", null, "cherry" };
+
+var filtered = items.WhereNotNull();
+Console.WriteLine(string.Join(", ", filtered));
+Console.WriteLine("////////////////////////////////////////////");
 
 
+//                                     3.
 
 
+DateTime today = DateTime.Now;
+Console.WriteLine(today.ToFriendlyDate());
+Console.WriteLine("////////////////////////////////////////////");
 
 
+//                                    4.
 
 
+int number = 15;
+int number2 = 25;
 
+Console.WriteLine(number.IsInRange(5,20));
+Console.WriteLine(number2.IsInRange(5, 20));
+Console.WriteLine("////////////////////////////////////////////");
+
+//                                    5.
+
+var numbers = new List<int> { 1, 2, 3, 4, 5 };
+var reversed = new List<int> { 5, 4, 3, 2, 1 };
+numbers.ReverseList();
+Console.WriteLine(string.Join(", ", numbers));
+reversed.ReverseList();
+Console.WriteLine(string.Join(", ", reversed));
 
 //using hwC_Step.old;
 
