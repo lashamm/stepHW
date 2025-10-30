@@ -3,16 +3,25 @@
 
 ///                                 Factorial extension method
 using hwC_Step;
+using System.Threading.Channels;
 
 int number = 5;
 Console.WriteLine(number.Factorial());
+Console.WriteLine("////////////////////////////");
 
 
 
+List<int> list = new List<int> { 1, 1, 2, 3, 3, 4, 5, 5 };
+
+list.RemoveDublicate().ForEach(Console.WriteLine);
+Console.WriteLine("//////////////////////////////");
 
 
 
+List<int> average = new List<int> {3, 4 , 7, 10 };
 
+Console.WriteLine(average.Average());
+Console.WriteLine("/////////////////////////////////");
 
 
 

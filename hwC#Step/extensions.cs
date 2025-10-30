@@ -37,13 +37,10 @@ namespace hwC_Step
                        return DateTime.Now;
         }
 
-
         public static bool IsInRange(this int value, int min, int max)
         {
             return value >= min && value <= max;
         }
-
-
 
         public static List<int> ReverseList(this List<int> list)
         {
@@ -59,6 +56,10 @@ namespace hwC_Step
 
         public static int Factorial(this int x)
         {
+            if (x < 0)
+            {
+                throw new ArgumentException("Negative numbers do not have a factorial.");
+            }
             int result = 1;
             for (int i = 1; i <= x; i++)
             {
@@ -67,5 +68,27 @@ namespace hwC_Step
             return result;
         }
 
+        public static List<T> RemoveDublicate<T>(this List<T> x)
+        {
+            return x.Distinct().ToList();
+        }
+
+        public static IEnumerable<T> average<T>(this IEnumerable<T> source, Func<T, double> selector)
+        {
+            if (source == null)
+                throw new ArgumentNullException(nameof(source));
+            if (selector == null)
+                throw new ArgumentNullException(nameof(selector));
+            double sum = 0;
+            int count = 0;
+            foreach (var item in source)
+            {
+                sum += selector(item);
+                count++;
+            }
+            if (count == 0)
+                throw new InvalidOperationException("Sequence contains no elements");
+            yield return (T)(object)(sum / count);
+        }
     }
 }
