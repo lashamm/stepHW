@@ -57,5 +57,15 @@ namespace hwC_Step
 
         }
 
+        public static int Factorial(this int x)
+        {
+            int result = 1;
+            for (int i = 1; i <= x; i++)
+            {
+                 result *= i;
+            }
+            return result;
+        }
+
     }
 }
