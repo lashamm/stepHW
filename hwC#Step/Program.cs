@@ -1,27 +1,63 @@
-﻿/////                                20th les HW
+﻿////////////                               21st les HW
 ///
 
-///                                 Factorial extension method
-using hwC_Step;
-using System.Threading.Channels;
 
-int number = 5;
-Console.WriteLine(number.Factorial());
-Console.WriteLine("////////////////////////////");
+string numbers = "nums.txt";
+string fibonachi = "fibonachi.txt";
+
+using (StreamWriter sw = new StreamWriter(numbers))
+{
+    List<int> ints = new List<int>();
+    for (int i = 1; i <= 100; i++)
+    {
+        ints.Add(i);
+    }
+    Console.WriteLine(ints);
+    sw.WriteLine(ints);
+}
 
 
 
-List<int> list = new List<int> { 1, 1, 2, 3, 3, 4, 5, 5 };
-
-list.RemoveDublicate().ForEach(Console.WriteLine);
-Console.WriteLine("//////////////////////////////");
 
 
 
-List<int> average = new List<int> {3, 4 , 7, 10 };
 
-Console.WriteLine(average.Average());
-Console.WriteLine("/////////////////////////////////");
+
+
+
+
+
+
+
+
+
+
+
+
+///////                                20th les HW
+/////
+
+/////                                 Factorial extension method
+//using hwC_Step;
+//using System.Threading.Channels;
+
+//int number = 5;
+//Console.WriteLine(number.Factorial());
+//Console.WriteLine("////////////////////////////");
+
+
+
+//List<int> list = new List<int> { 1, 1, 2, 3, 3, 4, 5, 5 };
+
+//list.RemoveDublicate().ForEach(Console.WriteLine);
+//Console.WriteLine("//////////////////////////////");
+
+
+
+//List<int> average = new List<int> {3, 4 , 7, 10 };
+
+//Console.WriteLine(average.Average());
+//Console.WriteLine("/////////////////////////////////");
 
 
 
