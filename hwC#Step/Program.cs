@@ -11,9 +11,9 @@ using (StreamWriter sw = new StreamWriter(numbers))
     for (int i = 1; i <= 100; i++)
     {
         ints.Add(i);
+        Console.WriteLine(ints[i]);
+        sw.WriteLine(ints[i]);
     }
-    Console.WriteLine(ints);
-    sw.WriteLine(ints);
 }
 
 
