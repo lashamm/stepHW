@@ -2,21 +2,81 @@
 ///
 
 
-string numbers = "nums.txt";
-string fibonachi = "fibonachi.txt";
+using System;
+using System.Collections.Generic;
+using System.IO;
 
-using (StreamWriter sw = new StreamWriter(numbers))
+string primeFile = "primes.txt";
+string fibonacciFile = "fibonacci.txt";
+
+List<int> numbers = new List<int>();
+for (int i = 1; i <= 100; i++)
 {
-    List<int> ints = new List<int>();
-    for (int i = 1; i <= 100; i++)
+    numbers.Add(i);
+}
+
+List<int> primes = new List<int>();
+foreach (int num in numbers)
+{
+    if (IsPrime(num))
     {
-        ints.Add(i);
-        Console.WriteLine(ints[i]);
-        sw.WriteLine(ints[i]);
+        primes.Add(num);
     }
 }
 
+List<int> fibonacci = GenerateFibonacci(100);
 
+using (StreamWriter sw = new StreamWriter(primeFile))
+{
+Console.WriteLine("prime nums:");
+foreach (int prime in primes)
+    {
+     sw.WriteLine(prime);
+     Console.Write(prime + " ");
+    }
+Console.WriteLine("\n");
+}
+
+using (StreamWriter sw = new StreamWriter(fibonacciFile))
+{
+Console.WriteLine("fibonachi nums:");
+    foreach (int fib in fibonacci)
+    {
+        sw.WriteLine(fib);
+        Console.Write(fib + " ");
+    }
+     Console.WriteLine("\n");
+}
+    
+static bool IsPrime(int number)
+{
+if (number < 2) return false;
+if (number == 2) return true;
+if (number % 2 == 0) return false;
+
+    for (int i = 3; i * i <= number; i += 2)
+    {
+       if (number % i == 0)
+       return false;
+    }
+return true;
+}
+
+static List<int> GenerateFibonacci(int max)
+{
+    List<int> fibonacci = new List<int>();
+    int a = 1, b = 1;
+
+while (a <= max)
+    {
+        fibonacci.Add(a);
+        int temp = a + b;
+        a = b;
+        b = temp;
+    }
+
+return fibonacci;
+}
 
 
 
