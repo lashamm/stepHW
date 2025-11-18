@@ -1,14 +1,65 @@
-﻿/////                                    22nd and 23rd les HW
+﻿/////                             Homework C# Step by Step
+///\
+///
+
+Type type = typeof(string);
+TypeExplorer.Explore(type);
+static class TypeExplorer
+{
+    public static void Explore(Type type)
+    {
+        Console.WriteLine($"Name: {type.Name}");
+        Console.WriteLine($"Name: {type.FullName}");
+        Console.WriteLine($"NameSpace: {type.Namespace}");
+        Console.WriteLine($"Base: {type.BaseType}");
+
+        Console.WriteLine("Implemented interfaces: ");
+        foreach (var t in type.GetInterfaces())
+        {
+            Console.WriteLine($"\t {t.FullName}");
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////                                    22nd and 23rd les HW
 ///
 
 
-using ConsoleApp_418_FinalProject.Manager;
-using ConsoleApp_418_FinalProject.Models;
+//using ConsoleApp_418_FinalProject.Manager;
+//using ConsoleApp_418_FinalProject.Models;
 
 ///
-MovieManager movieManager = new MovieManager();
 
-movieManager.AddMovie(new Movie("Inception", "smth", 1990, Genre.Drama));
+
+
+
+//MovieManager movieManager = new MovieManager();
+
+//movieManager.AddMovie(new Movie("Inception", "smth", 1990, Genre.Drama));
 
 
 

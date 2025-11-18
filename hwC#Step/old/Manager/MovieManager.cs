@@ -1,6 +1,6 @@
-﻿using ConsoleApp_418_FinalProject.Models;
+﻿using hwC_Step.old.Models;
 
-namespace ConsoleApp_418_FinalProject.Manager
+namespace hwC_Step.old.Manager
 {
     internal class MovieManager : Icrud
     {
@@ -23,7 +23,7 @@ namespace ConsoleApp_418_FinalProject.Manager
 
         public bool GetMovie(string title, out Movie? movie)
         {
-            Func<Movie, bool> func = (movie => movie.Title.Equals(title, StringComparison.OrdinalIgnoreCase));
+            Func<Movie, bool> func = movie => movie.Title.Equals(title, StringComparison.OrdinalIgnoreCase);
 
             bool result = _movies.Any(func);
 

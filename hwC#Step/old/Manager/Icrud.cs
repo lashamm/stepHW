@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp_418_FinalProject.Manager
+namespace hwC_Step.old.Manager
 {
     internal interface Icrud
     {

@@ -1,6 +1,6 @@
 ﻿using System.Security;
 
-namespace ConsoleApp_418_FinalProject.Models
+namespace hwC_Step.old.Models
 {
     enum Genre
     {
@@ -73,18 +73,18 @@ namespace ConsoleApp_418_FinalProject.Models
             int releaseYear,
             Genre genre)
         {
-            this.Title = title;
-            this.Director = director;
-            this.ReleaseYear = releaseYear;
-            this.Genre = genre;
+            Title = title;
+            Director = director;
+            ReleaseYear = releaseYear;
+            Genre = genre;
         }
 
         public override string ToString()
         {
-            return $"Title: {this.Title}, " +
-                $"Director: {this.Director}, " +
-                $"ReleaseYear {this.ReleaseYear}, " +
-                $"Genre: {this.Genre}";
+            return $"Title: {Title}, " +
+                $"Director: {Director}, " +
+                $"ReleaseYear {ReleaseYear}, " +
+                $"Genre: {Genre}";
         }
     }
 }
