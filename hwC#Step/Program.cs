@@ -1,661 +1,162 @@
-﻿/////                             Homework C# Step by Step
-///\
-///
-
-Type type = typeof(string);
-TypeExplorer.Explore(type);
-static class TypeExplorer
-{
-    public static void Explore(Type type)
-    {
-        Console.WriteLine($"Name: {type.Name}");
-        Console.WriteLine($"Name: {type.FullName}");
-        Console.WriteLine($"NameSpace: {type.Namespace}");
-        Console.WriteLine($"Base: {type.BaseType}");
-
-        Console.WriteLine("Implemented interfaces: ");
-        foreach (var t in type.GetInterfaces())
-        {
-            Console.WriteLine($"\t {t.FullName}");
-        }
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/////                                    22nd and 23rd les HW
-///
-
-
-//using ConsoleApp_418_FinalProject.Manager;
-//using ConsoleApp_418_FinalProject.Models;
-
-///
-
-
-
-
-//MovieManager movieManager = new MovieManager();
-
-//movieManager.AddMovie(new Movie("Inception", "smth", 1990, Genre.Drama));
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-////////////                               21st les HW
-///
-
-
-//using System;
-//using System.Collections.Generic;
-//using System.IO;
-
-//string primeFile = "primes.txt";
-//string fibonacciFile = "fibonacci.txt";
-
-//List<int> numbers = new List<int>();
-//for (int i = 1; i <= 100; i++)
-//{
-//    numbers.Add(i);
-//}
-
-//List<int> primes = new List<int>();
-//foreach (int num in numbers)
-//{
-//    if (IsPrime(num))
-//    {
-//        primes.Add(num);
-//    }
-//}
-
-//List<int> fibonacci = GenerateFibonacci(100);
-
-//using (StreamWriter sw = new StreamWriter(primeFile))
-//{
-//Console.WriteLine("prime nums:");
-//foreach (int prime in primes)
-//    {
-//     sw.WriteLine(prime);
-//     Console.Write(prime + " ");
-//    }
-//Console.WriteLine("\n");
-//}
-
-//using (StreamWriter sw = new StreamWriter(fibonacciFile))
-//{
-//Console.WriteLine("fibonachi nums:");
-//    foreach (int fib in fibonacci)
-//    {
-//        sw.WriteLine(fib);
-//        Console.Write(fib + " ");
-//    }
-//     Console.WriteLine("\n");
-//}
-
-//static bool IsPrime(int number)
-//{
-//if (number < 2) return false;
-//if (number == 2) return true;
-//if (number % 2 == 0) return false;
-
-//    for (int i = 3; i * i <= number; i += 2)
-//    {
-//       if (number % i == 0)
-//       return false;
-//    }
-//return true;
-//}
-
-//static List<int> GenerateFibonacci(int max)
-//{
-//    List<int> fibonacci = new List<int>();
-//    int a = 1, b = 1;
-
-//while (a <= max)
-//    {
-//        fibonacci.Add(a);
-//        int temp = a + b;
-//        a = b;
-//        b = temp;
-//    }
-
-//return fibonacci;
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-///////                                20th les HW
-/////
-
-/////                                 Factorial extension method
-//using hwC_Step;
-//using System.Threading.Channels;
-
-//int number = 5;
-//Console.WriteLine(number.Factorial());
-//Console.WriteLine("////////////////////////////");
-
-
-
-//List<int> list = new List<int> { 1, 1, 2, 3, 3, 4, 5, 5 };
-
-//list.RemoveDublicate().ForEach(Console.WriteLine);
-//Console.WriteLine("//////////////////////////////");
-
-
-
-//List<int> average = new List<int> {3, 4 , 7, 10 };
-
-//Console.WriteLine(average.Average());
-//Console.WriteLine("/////////////////////////////////");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/////                                 19th les HW
-/////                                 
-
-
-
-////                                      1.
-
-
-//string text = "i miss lorem";
-//string text2 = "i need lorem in c#";
-
-//Console.WriteLine(text.wordcount());
-//Console.WriteLine(text2.wordcount());
-//Console.WriteLine("////////////////////////////////////////////");
-
-
-
-////                                     2.
-
-
-//var items = new List<string> { "apple", null, "banana", null, "cherry" };
-
-//var filtered = items.WhereNotNull();
-//Console.WriteLine(string.Join(", ", filtered));
-//Console.WriteLine("////////////////////////////////////////////");
-
-
-////                                     3.
-
-
-//DateTime today = DateTime.Now;
-//Console.WriteLine(today.ToFriendlyDate());
-//Console.WriteLine("////////////////////////////////////////////");
-
-
-////                                    4.
-
-
-//int number = 15;
-//int number2 = 25;
-
-//Console.WriteLine(number.IsInRange(5,20));
-//Console.WriteLine(number2.IsInRange(5, 20));
-//Console.WriteLine("////////////////////////////////////////////");
-
-////                                    5.
-
-//var numbers = new List<int> { 1, 2, 3, 4, 5 };
-//var reversed = new List<int> { 5, 4, 3, 2, 1 };
-//numbers.ReverseList();
-//Console.WriteLine(string.Join(", ", numbers));
-//reversed.ReverseList();
-//Console.WriteLine(string.Join(", ", reversed));
-
-////using hwC_Step.old;
-
-
-//////                                    18th les HW
-/////
-
-
-
-//List<Product> products = new List<Product>
-//{
-//    new Product { Id = 1, Name = "Laptop", Category = "Electronics", Description = "High performance laptop", Price = 999.99m },
-//    new Product { Id = 2, Name = "Headphones", Category = "Electronics", Description = "Noise-cancelling headphones", Price = 199.99m },
-//    new Product { Id = 3, Name = "Coffee Mug", Category = "Kitchenware", Description = "Ceramic coffee mug", Price = 9.99m },
-//    new Product { Id = 4, Name = "Office Chair", Category = "Furniture", Description = "Ergonomic office chair", Price = 149.99m },
-//    new Product { Id = 5, Name = "Smartphone", Category = "Electronics", Description = "Latest model smartphone", Price = 699.99m },
-//    new Product { Id = 6, Name = "Bluetooth Speaker", Category = "Electronics", Description = "Portable Bluetooth speaker", Price = 59.99m },
-//    new Product { Id = 7, Name = "Notebook", Category = "Stationery", Description = "100-page ruled notebook", Price = 2.49m },
-//    new Product { Id = 8, Name = "Desk Lamp", Category = "Furniture", Description = "LED desk lamp", Price = 29.99m },
-//    new Product { Id = 9, Name = "Backpack", Category = "Accessories", Description = "Water-resistant backpack", Price = 49.99m },
-//    new Product { Id = 10, Name = "Water Bottle", Category = "Kitchenware", Description = "Insulated water bottle", Price = 19.99m },
-//    new Product { Id = 11, Name = "Monitor", Category = "Electronics", Description = "27-inch 4K monitor", Price = 299.99m },
-//    new Product { Id = 12, Name = "Wireless Mouse", Category = "Electronics", Description = "Ergonomic wireless mouse", Price = 24.99m },
-//    new Product { Id = 13, Name = "Keyboard", Category = "Electronics", Description = "Mechanical keyboard", Price = 89.99m },
-//    new Product { Id = 14, Name = "Sneakers", Category = "Footwear", Description = "Running sneakers", Price = 79.99m },
-//    new Product { Id = 15, Name = "Sunglasses", Category = "Accessories", Description = "UV protection sunglasses", Price = 39.99m },
-//    new Product { Id = 16, Name = "T-shirt", Category = "Clothing", Description = "Cotton t-shirt", Price = 14.99m },
-//    new Product { Id = 17, Name = "Jeans", Category = "Clothing", Description = "Denim jeans", Price = 49.99m },
-//    new Product { Id = 18, Name = "Watch", Category = "Accessories", Description = "Digital wristwatch", Price = 129.99m },
-//    new Product { Id = 19, Name = "Tablet", Category = "Electronics", Description = "10-inch tablet", Price = 399.99m },
-//    new Product { Id = 20, Name = "Charger", Category = "Electronics", Description = "Fast USB charger", Price = 14.99m },
-//    new Product { Id = 21, Name = "Flash Drive", Category = "Electronics", Description = "64GB USB flash drive", Price = 19.99m },
-//    new Product { Id = 22, Name = "Camera", Category = "Electronics", Description = "Digital camera", Price = 249.99m },
-//    new Product { Id = 23, Name = "Bookshelf", Category = "Furniture", Description = "Wooden bookshelf", Price = 89.99m },
-//    new Product { Id = 24, Name = "Cookware Set", Category = "Kitchenware", Description = "10-piece cookware set", Price = 129.99m },
-//    new Product { Id = 25, Name = "Blender", Category = "Kitchenware", Description = "High-speed blender", Price = 59.99m },
-//    new Product { Id = 26, Name = "Yoga Mat", Category = "Fitness", Description = "Non-slip yoga mat", Price = 24.99m },
-//    new Product { Id = 27, Name = "Dumbbells", Category = "Fitness", Description = "Set of 2 dumbbells", Price = 39.99m },
-//    new Product { Id = 28, Name = "Running Shorts", Category = "Clothing", Description = "Lightweight running shorts", Price = 19.99m },
-//    new Product { Id = 29, Name = "Baseball Cap", Category = "Accessories", Description = "Adjustable baseball cap", Price = 12.99m },
-//    new Product { Id = 30, Name = "Electric Kettle", Category = "Kitchenware", Description = "1.7L electric kettle", Price = 29.99m },
-//};
-
-//List<User> users = new List<User>
-//{
-//    new User { Age = 25, Name = "Alice" },
-//    new User { Age = 30, Name = "Bob" },
-//    new User { Age = 22, Name = "Charlie" },
-//    new User { Age = 35, Name = "Diana" },
-//    new User { Age = 28, Name = "Eve" },
-//    new User { Age = 33, Name = "Frank" },
-//    new User { Age = 17, Name = "Grace" },
-//    new User { Age = 31, Name = "Henry" },
-//    new User { Age = 14, Name = "Iris" },
-//    new User { Age = 29, Name = "Jack" },
-//    new User { Age = 16, Name = "Karen" },
-//    new User { Age = 34, Name = "Liam" },
-//    new User { Age = 23, Name = "Mia" },
-//    new User { Age = 32, Name = "Noah" },
-//    new User { Age = 21, Name = "Olivia" },
-//    new User { Age = 36, Name = "Paul" },
-//    new User { Age = 28, Name = "Quinn" },
-//    new User { Age = 30, Name = "Rachel" },
-//    new User { Age = 25, Name = "Sam" },
-//    new User { Age = 17, Name = "Tina" },
-//    new User { Age = 33, Name = "Ulysses" },
-//    new User { Age = 19, Name = "Vera" },
-//    new User { Age = 31, Name = "Walter" },
-//    new User { Age = 26, Name = "Xena" },
-//    new User { Age = 24, Name = "Yuri" },
-//    new User { Age = 15, Name = "Zoe" },
-//    new User { Age = 12, Name = "Aaron" },
-//    new User { Age = 28, Name = "Bella" },
-//    new User { Age = 12, Name = "Chris" },
-//    new User { Age = 10, Name = "Daisy" }
-//};
-
-////var groups = products.GroupBy(x => x.Category);
-
-////foreach (var group in groups)
+﻿///                         threading HW
+///                         
+
+////სავარჯიშო 1: ორი Thread ერთდროულად - შექმენით ორი Thread,
+////რომლებიც პარალელურად დაბეჭდავენ სხვადასხვა ტექსტს.
+////· პირველი Thread დაბეჭდოს "Thread 1: რიცხვი X"
+////(1-დან 5-მდე)
+////· მეორე Thread დაბეჭდოს "Thread 2: ასო Y" (A-დან E-მდე)
+////· თითოეულმა უნდა დაიძინოს 300 მილიწამი
+////თითოეულ ბეჭდვას შორის
+////მინიშნებები:
+
+////Thread thread1 = new Thread(Method1);
+////Thread thread2 = new Thread(Method2);
+////thread1.Start();
+////thread2.Start();
+
+////static void Method1()
 ////{
-////Console.WriteLine(group.Key);
-////foreach (var item in group)
-////{
-////Console.WriteLine("\t" + item.Name);
-////}
+////    for(int i = 1; i <= 5; i++)
+////    {
+////        Console.WriteLine($"Thread 1 : Num {i}");
+////        Thread.Sleep(300);
+////    }
 ////}
 
-//List<Order> orders = new List<Order>();
+////static void Method2()
+////{
+////    for(char i = 'A'; i <= 'E'; i++)
+////    {
+////        Console.WriteLine($"Thread 2 : Char {i}");
+////        Thread.Sleep(300);
+////    }
+////}
 
-//Random rand = new Random();
-//DateTime startDate = DateTime.Now.AddMonths(-3);
 
-//for (int i = 1; i <= 50; i++)
+
+////სავარჯიშო 2: Thread - ის პრიორიტეტი - შექმენით
+////სამი Thread განსხვავებული პრიორიტეტებით და დაათვალიერეთ როგორ მუშაობენ.
+////· შექმენით სამი Thread, რომლებიც ითვლიან 0-დან 1000000-მდე
+////· დააყენეთ პრიორიტეტები: Highest, Normal, Lowest
+////· დაბეჭდეთ თითოეული Thread-ის დასრულების დრო
+////მინიშნებები:
+////thread1.Priority = ThreadPriority.Highest;
+
+
+//using System.Diagnostics;
+
+//int x  = 1_000_000;
+//ThreadStart del = () =>
 //{
-//orders.Add(new Order
+//    var currentThread = Thread.CurrentThread;
+//    Stopwatch sw = Stopwatch.StartNew();
+
+//    Console.WriteLine($"Current thread {currentThread.Name}");
+//    for (int i = 0; i <= x; i++)
+//    {
+//        Thread.Sleep(1);
+//    }
+//    Console.WriteLine($"{currentThread.Name} finished:" +
+//        $"{sw.Elapsed.Seconds}");
+//};
+
+//Thread thread1 = new Thread(Thread1);
+//Thread thread2 = new Thread(Thread2);
+//Thread thread3 = new Thread(Thread3);
+
+//thread1.Priority = ThreadPriority.Highest;
+//thread2.Priority = ThreadPriority.Normal;
+//thread3.Priority = ThreadPriority.Lowest;
+
+//thread1.Name = "Highest";
+//thread2.Name = "Normal";
+//thread3.Name = "Lowest";
+
+//thread1.Start();
+//thread2.Start();
+//thread3.Start();
+
+
+//static void Thread1()
 //{
-//Id = i,
-//PurchaseTime = startDate.AddDays(rand.Next(1, 90)).AddHours(rand.Next(0, 24)).AddMinutes(rand.Next(0, 60)),
-//ProductId = rand.Next(1, 31),  
-//UserId = rand.Next(100, 121)   
-//});
+//       for (int i = 0; i <= 1000000; i++)
+//    {
+
+//    }
+//    Console.WriteLine("Thread 1 (Highest Priority) finished.");
 //}
-/////////
-//var joinedItems = from o in orders
-//join p in products on o.ProductId equals p.Id
-//                  select new
+//static void Thread2()
 //{
-//Id = o.Id,
-//PurchaseTime = o.PurchaseTime,
-//ProductName = p.Name,
-//Category =p.Category,
-//Description =p.Description,
-//Price = p.Price,
-//                  };
+//    for (int i = 0; i <= 1000000; i++)
+//    {
 
-
-
-
-
-//foreach (var item in joinedItems)
+//    }
+//    Console.WriteLine("Thread 2 (Normal Priority) finished.");
+//}
+//static void Thread3()
 //{
-////Console.WriteLine($"{item.PurchaseTime}, {item.ProductName}, {item.Description}");
+//    for (int i = 0; i <= 1000000; i++)
+//    {
+
+//    }
+//    Console.WriteLine("Thread 3 (Lowest Priority) finished.");
 //}
 
-//// პროდუქტის ფასი 50-ზე მეტია
-//var moreThan50 = products.Where(p => p.Price > 50);
 
-//// შეძენა გუშინ მოხდა
-//var yesterday = DateTime.Now.AddDays(-1);
-////Print(yesterday);
 
-//// კატეგორია Electronics - ის პროდუქტები
-//var uniqueProducts = products.DistinctBy(x => x.Category).Select(x => x.Category);
-//////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////                             Homework C# Step by Step
+/////\
 /////
 
-/////        18+ buyers
-
-
-//foreach (var product in uniqueProducts)
+//Type type = typeof(string);
+//TypeExplorer.Explore(type);
+//static class TypeExplorer
 //{
-//Console.WriteLine(product);
-//}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/////                                         17th les HW
-/////                                         დავალების აღწერა:
-/////          Student - ების სიიდან წამოიღეთ ის სტუდენტები, რომელთა: 
-/////          1.ქულაც 5 - ზე მეტია. 2.ქალაქიც იწყება 'a'- ზე
-
-
-
-//List<Student> students = new List<Student>
-//{
-//    new Student { Name = "Alice Johnson", Age = 16, Grade = 10, City = "New York" },
-//    new Student { Name = "Benjamin Lee", Age = 17, Grade = 11, City = "Los Angeles" },
-//    new Student { Name = "Charlotte Smith", Age = 15, Grade = 9, City = "Chicago" },
-//    new Student { Name = "Daniel Brown", Age = 18, Grade = 12, City = "New York" },  
-//    new Student { Name = "Ella Davis", Age = 16, Grade = 10, City = "Phoenix" },
-//    new Student { Name = "Frank Miller", Age = 17, Grade = 11, City = "Los Angeles" },   
-//    new Student { Name = "Grace Wilson", Age = 15, Grade = 9, City = "San Antonio" },
-//    new Student { Name = "Henry Moore", Age = 18, Grade = 12, City = "Chicago" },        
-//    new Student { Name = "Isabella Taylor", Age = 16, Grade = 10, City = "Dallas" },
-//    new Student { Name = "Jack Anderson", Age = 17, Grade = 11, City = "San Jose" },
-//    new Student { Name = "Katherine Thomas", Age = 15, Grade = 9, City = "Austin" },
-//    new Student { Name = "Liam Martinez", Age = 18, Grade = 12, City = "Phoenix" },         
-//    new Student { Name = "Mia Robinson", Age = 16, Grade = 10, City = "San Antonio" },     
-//    new Student { Name = "Noah Clark", Age = 17, Grade = 11, City = "Dallas" }              
-//};
-
-//var orderedByAge = students.OrderByDescending(x => x.Age);
-//Print(orderedByAge);
-
-//Console.WriteLine("==============================");
-
-//var isAllAdult = students.All(s => s.Age >= 18);
-//Console.WriteLine(isAllAdult);
-
-//Console.WriteLine("==============================");
-
-//var gradeAbove5 = students.Where(a => a.Grade > 5);
-//Print(gradeAbove5);
-
-//Console.WriteLine("==============================");
-//var cityStartsWithA = students.Where(a => a.City.StartsWith("a", StringComparison.OrdinalIgnoreCase));
-//Print(cityStartsWithA);
-
-//static void Print<T>(IEnumerable<T> collection)
-//{
-//    foreach (var item in collection)
+//    public static void Explore(Type type)
 //    {
-//        Console.WriteLine(item);
-//    }
-//}
+//        Console.WriteLine($"Name: {type.Name}");
+//        Console.WriteLine($"Name: {type.FullName}");
+//        Console.WriteLine($"NameSpace: {type.Namespace}");
+//        Console.WriteLine($"Base: {type.BaseType}");
 
-
-
-
-
-
-
-
-
-
-
-
-
-///                                          16th les HW
-///                                           ლამბდას სავარჯიშოები 
-/// 1. დაწერეთ ლამბდა, რომელიც იღებს რიცხვების სიას და აბრუნებს მათ კვადრატების სიას. 
-/// 2. შექმენით ლამბდა, რომელიც ლექსიკონიდან (Dictionary<string, int>)
-/// აბრუნებს იმ ელემენტებს, რომელთა მნიშვნელობა მეტია 10-ზე   
-///                                                    1.
-///                                                    
-//List<double> numberList = [2, 3, 7, 5, 12];
-//Func<List<double>, List<double>> squares = numbers =>
-//{
-//    List<double> result = new List<double>();
-//    foreach (var number in numbers)
-//    {
-//        result.Add(Math.Pow(number, 2));
-//    }
-//    return result;
-//};
-//List<double> squaresResult = squares(numberList);
-
-//foreach (var value in squaresResult)
-//{
-//    Console.WriteLine(value);
-//}
-
-///                                                    2.
-///                                                    
-
-
-//Dictionary<int, string> dictionary = new Dictionary<int, string>()
-//{
-//    {5, "five"},
-//    {15, "fifteen"},
-//    {25, "twenty five"},
-//    {8, "eight"}
-//};
-
-//string result = string.Empty;
-
-//Action<string> action = s =>
-//{
-//    foreach (var item in dictionary)
-//    {
-
-//        if (item.Key > 10)
+//        Console.WriteLine("Implemented interfaces: ");
+//        foreach (var t in type.GetInterfaces())
 //        {
-//            result = item.Value;
-//            Console.WriteLine(result);
-
+//            Console.WriteLine($"\t {t.FullName}");
 //        }
-
 //    }
-//};
-
-//action("some value");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//using System;
-
-///                                  15th les HW
-///                                   Delegates 
-///                                   
-/// 1. დაწერეთ პროგრამა, რომელიც: · იღებს სტრინგების სიას; 
-/// · Predicate<string> - ით ფილტრავს მხოლოდ მათ, რომლებიც 5-ზე მეტ სიმბოლოს შეიცავს; 
-/// · Action<string> - ით თითოეულს ბეჭდავს დიდ ასოებში. 
-/// 2. დამატებითი სავარჯიშო: · შექმენით საკუთარი delegate, 
-/// რომელიც იღებს ორ მთელ რიცხვს და აბრუნებს განსხვავებას; 
-/// · დაწერეთ პროგრამა, რომელიც ამ delegate-ს იყენებს როგორც ცვლადს.
-
-//string a = "hello";
-//string b = "hello world";
-//string c = "mAkE thIS UpPeRCAsE";
-
-//Predicate<string> predocate = s => s.Length > 5;
-//Console.WriteLine(predocate(a));
-//Console.WriteLine(predocate(b));
-//Action<string> action = s => Console.WriteLine(s.ToUpper());
-//action(c);
-
-
-//MyDelegate myDelegate = diff;
-//Console.WriteLine(myDelegate(2, 3));
-//static int diff(int x, int y)
-//{
-//    int difference;
-//    difference = y - x;
-//    return difference;
 //}
 
 
-//delegate int MyDelegate(int x, int y);
 
-////////////////////////////////////////////////////////////////////////////////////////
 
-//using System.Reflection.Emit;
-//using hwC_Step;
 
-///                                14th les HW
-///                            დავალების აღწერა:
-///                               Generic 
-///  1. შექმენით Pair<T1, T2> Generic კლასი
-///  · შეინახოს ორი ტიპის მნიშვნელობა. 
-///  · ჰქონდეს კონსტრუქტორი და მეთოდი Print(). 
-///  2. Generic მეთოდი, რომელიც აბრუნებს 
-///  მინიმუმს public T Min<T>(T a, T b) where T : IComparable<T>     
 
-//class Pair<T1, T2>
-//{
-//    public T1 First { get; set; }
-//    public T2 Second { get; set; }
 
-//    public Pair(T1 first, T2 second)
-//    {
-//        First = first;
-//        Second = second;
-//    }
 
-//    public void Print()
-//    {
-//        Console.WriteLine($"First: {First}, Second: {Second}");
-//    }
 
-//}
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//T Min<T>(T a, T b) where T : IComparable<T>
-//{
-//    return a.CompareTo(b) < 0 ? a : b;
-//}
 
-//Console.WriteLine(Min(5, 2));
 
 
 
@@ -669,14 +170,21 @@ static class TypeExplorer
 
 
 
+///////                                    22nd and 23rd les HW
+/////
 
 
+////using ConsoleApp_418_FinalProject.Manager;
+////using ConsoleApp_418_FinalProject.Models;
 
+/////
 
 
 
 
+////MovieManager movieManager = new MovieManager();
 
+////movieManager.AddMovie(new Movie("Inception", "smth", 1990, Genre.Drama));
 
 
 
@@ -700,41 +208,86 @@ static class TypeExplorer
 
 
 
+//////////////                               21st les HW
+/////
 
 
+////using System;
+////using System.Collections.Generic;
+////using System.IO;
 
+////string primeFile = "primes.txt";
+////string fibonacciFile = "fibonacci.txt";
 
+////List<int> numbers = new List<int>();
+////for (int i = 1; i <= 100; i++)
+////{
+////    numbers.Add(i);
+////}
 
+////List<int> primes = new List<int>();
+////foreach (int num in numbers)
+////{
+////    if (IsPrime(num))
+////    {
+////        primes.Add(num);
+////    }
+////}
 
+////List<int> fibonacci = GenerateFibonacci(100);
 
-//                             1st les HW 1
+////using (StreamWriter sw = new StreamWriter(primeFile))
+////{
+////Console.WriteLine("prime nums:");
+////foreach (int prime in primes)
+////    {
+////     sw.WriteLine(prime);
+////     Console.Write(prime + " ");
+////    }
+////Console.WriteLine("\n");
+////}
 
-//string name;
-//string lastName;
-//int age;
-//string favoriteColor;
-//string favoriteFood;
+////using (StreamWriter sw = new StreamWriter(fibonacciFile))
+////{
+////Console.WriteLine("fibonachi nums:");
+////    foreach (int fib in fibonacci)
+////    {
+////        sw.WriteLine(fib);
+////        Console.Write(fib + " ");
+////    }
+////     Console.WriteLine("\n");
+////}
 
-//Console.WriteLine("enter your name");
-//name = Console.ReadLine();
+////static bool IsPrime(int number)
+////{
+////if (number < 2) return false;
+////if (number == 2) return true;
+////if (number % 2 == 0) return false;
 
-//Console.WriteLine("enter your LastName");
-//lastName = Console.ReadLine();
+////    for (int i = 3; i * i <= number; i += 2)
+////    {
+////       if (number % i == 0)
+////       return false;
+////    }
+////return true;
+////}
 
-//Console.WriteLine("enter your age");
-//age = int.Parse(Console.ReadLine());
+////static List<int> GenerateFibonacci(int max)
+////{
+////    List<int> fibonacci = new List<int>();
+////    int a = 1, b = 1;
 
-//Console.WriteLine("enter your favorite color");
-//favoriteColor = Console.ReadLine();
+////while (a <= max)
+////    {
+////        fibonacci.Add(a);
+////        int temp = a + b;
+////        a = b;
+////        b = temp;
+////    }
 
-//Console.WriteLine("enter your favorite food");
-//favoriteFood = Console.ReadLine();
+////return fibonacci;
+////}
 
-//Console.WriteLine($"your name is {name}" +
-//    $" your last name is {lastName}" +
-//    $" you are {age}" +
-//    $" years old your favourite color is {favoriteColor}" +
-//    $" and your favorite food is {favoriteFood}");
 
 
 
@@ -742,23 +295,595 @@ static class TypeExplorer
 
 
 
-//                           1st les HW 2 
 
 
-//double balance;
-//double depositAmount;
-//double withdrawAmount;
 
-//Console.WriteLine("Enter your balance:");
-//balance = double.Parse(Console.ReadLine());
 
-//Console.WriteLine("Enter the amount you want to deposit:");
-//depositAmount = double.Parse(Console.ReadLine());
 
-//Console.WriteLine("Enter the amount you want to withdraw:");
-//withdrawAmount = double.Parse(Console.ReadLine());
 
-//Console.Clear();
 
-//Console.WriteLine($"Your balance is: {balance + depositAmount - withdrawAmount}");
+
+
+/////////                                20th les HW
+///////
+
+///////                                 Factorial extension method
+////using hwC_Step;
+////using System.Threading.Channels;
+
+////int number = 5;
+////Console.WriteLine(number.Factorial());
+////Console.WriteLine("////////////////////////////");
+
+
+
+////List<int> list = new List<int> { 1, 1, 2, 3, 3, 4, 5, 5 };
+
+////list.RemoveDublicate().ForEach(Console.WriteLine);
+////Console.WriteLine("//////////////////////////////");
+
+
+
+////List<int> average = new List<int> {3, 4 , 7, 10 };
+
+////Console.WriteLine(average.Average());
+////Console.WriteLine("/////////////////////////////////");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////                                 19th les HW
+///////                                 
+
+
+
+//////                                      1.
+
+
+////string text = "i miss lorem";
+////string text2 = "i need lorem in c#";
+
+////Console.WriteLine(text.wordcount());
+////Console.WriteLine(text2.wordcount());
+////Console.WriteLine("////////////////////////////////////////////");
+
+
+
+//////                                     2.
+
+
+////var items = new List<string> { "apple", null, "banana", null, "cherry" };
+
+////var filtered = items.WhereNotNull();
+////Console.WriteLine(string.Join(", ", filtered));
+////Console.WriteLine("////////////////////////////////////////////");
+
+
+//////                                     3.
+
+
+////DateTime today = DateTime.Now;
+////Console.WriteLine(today.ToFriendlyDate());
+////Console.WriteLine("////////////////////////////////////////////");
+
+
+//////                                    4.
+
+
+////int number = 15;
+////int number2 = 25;
+
+////Console.WriteLine(number.IsInRange(5,20));
+////Console.WriteLine(number2.IsInRange(5, 20));
+////Console.WriteLine("////////////////////////////////////////////");
+
+//////                                    5.
+
+////var numbers = new List<int> { 1, 2, 3, 4, 5 };
+////var reversed = new List<int> { 5, 4, 3, 2, 1 };
+////numbers.ReverseList();
+////Console.WriteLine(string.Join(", ", numbers));
+////reversed.ReverseList();
+////Console.WriteLine(string.Join(", ", reversed));
+
+//////using hwC_Step.old;
+
+
+////////                                    18th les HW
+///////
+
+
+
+////List<Product> products = new List<Product>
+////{
+////    new Product { Id = 1, Name = "Laptop", Category = "Electronics", Description = "High performance laptop", Price = 999.99m },
+////    new Product { Id = 2, Name = "Headphones", Category = "Electronics", Description = "Noise-cancelling headphones", Price = 199.99m },
+////    new Product { Id = 3, Name = "Coffee Mug", Category = "Kitchenware", Description = "Ceramic coffee mug", Price = 9.99m },
+////    new Product { Id = 4, Name = "Office Chair", Category = "Furniture", Description = "Ergonomic office chair", Price = 149.99m },
+////    new Product { Id = 5, Name = "Smartphone", Category = "Electronics", Description = "Latest model smartphone", Price = 699.99m },
+////    new Product { Id = 6, Name = "Bluetooth Speaker", Category = "Electronics", Description = "Portable Bluetooth speaker", Price = 59.99m },
+////    new Product { Id = 7, Name = "Notebook", Category = "Stationery", Description = "100-page ruled notebook", Price = 2.49m },
+////    new Product { Id = 8, Name = "Desk Lamp", Category = "Furniture", Description = "LED desk lamp", Price = 29.99m },
+////    new Product { Id = 9, Name = "Backpack", Category = "Accessories", Description = "Water-resistant backpack", Price = 49.99m },
+////    new Product { Id = 10, Name = "Water Bottle", Category = "Kitchenware", Description = "Insulated water bottle", Price = 19.99m },
+////    new Product { Id = 11, Name = "Monitor", Category = "Electronics", Description = "27-inch 4K monitor", Price = 299.99m },
+////    new Product { Id = 12, Name = "Wireless Mouse", Category = "Electronics", Description = "Ergonomic wireless mouse", Price = 24.99m },
+////    new Product { Id = 13, Name = "Keyboard", Category = "Electronics", Description = "Mechanical keyboard", Price = 89.99m },
+////    new Product { Id = 14, Name = "Sneakers", Category = "Footwear", Description = "Running sneakers", Price = 79.99m },
+////    new Product { Id = 15, Name = "Sunglasses", Category = "Accessories", Description = "UV protection sunglasses", Price = 39.99m },
+////    new Product { Id = 16, Name = "T-shirt", Category = "Clothing", Description = "Cotton t-shirt", Price = 14.99m },
+////    new Product { Id = 17, Name = "Jeans", Category = "Clothing", Description = "Denim jeans", Price = 49.99m },
+////    new Product { Id = 18, Name = "Watch", Category = "Accessories", Description = "Digital wristwatch", Price = 129.99m },
+////    new Product { Id = 19, Name = "Tablet", Category = "Electronics", Description = "10-inch tablet", Price = 399.99m },
+////    new Product { Id = 20, Name = "Charger", Category = "Electronics", Description = "Fast USB charger", Price = 14.99m },
+////    new Product { Id = 21, Name = "Flash Drive", Category = "Electronics", Description = "64GB USB flash drive", Price = 19.99m },
+////    new Product { Id = 22, Name = "Camera", Category = "Electronics", Description = "Digital camera", Price = 249.99m },
+////    new Product { Id = 23, Name = "Bookshelf", Category = "Furniture", Description = "Wooden bookshelf", Price = 89.99m },
+////    new Product { Id = 24, Name = "Cookware Set", Category = "Kitchenware", Description = "10-piece cookware set", Price = 129.99m },
+////    new Product { Id = 25, Name = "Blender", Category = "Kitchenware", Description = "High-speed blender", Price = 59.99m },
+////    new Product { Id = 26, Name = "Yoga Mat", Category = "Fitness", Description = "Non-slip yoga mat", Price = 24.99m },
+////    new Product { Id = 27, Name = "Dumbbells", Category = "Fitness", Description = "Set of 2 dumbbells", Price = 39.99m },
+////    new Product { Id = 28, Name = "Running Shorts", Category = "Clothing", Description = "Lightweight running shorts", Price = 19.99m },
+////    new Product { Id = 29, Name = "Baseball Cap", Category = "Accessories", Description = "Adjustable baseball cap", Price = 12.99m },
+////    new Product { Id = 30, Name = "Electric Kettle", Category = "Kitchenware", Description = "1.7L electric kettle", Price = 29.99m },
+////};
+
+////List<User> users = new List<User>
+////{
+////    new User { Age = 25, Name = "Alice" },
+////    new User { Age = 30, Name = "Bob" },
+////    new User { Age = 22, Name = "Charlie" },
+////    new User { Age = 35, Name = "Diana" },
+////    new User { Age = 28, Name = "Eve" },
+////    new User { Age = 33, Name = "Frank" },
+////    new User { Age = 17, Name = "Grace" },
+////    new User { Age = 31, Name = "Henry" },
+////    new User { Age = 14, Name = "Iris" },
+////    new User { Age = 29, Name = "Jack" },
+////    new User { Age = 16, Name = "Karen" },
+////    new User { Age = 34, Name = "Liam" },
+////    new User { Age = 23, Name = "Mia" },
+////    new User { Age = 32, Name = "Noah" },
+////    new User { Age = 21, Name = "Olivia" },
+////    new User { Age = 36, Name = "Paul" },
+////    new User { Age = 28, Name = "Quinn" },
+////    new User { Age = 30, Name = "Rachel" },
+////    new User { Age = 25, Name = "Sam" },
+////    new User { Age = 17, Name = "Tina" },
+////    new User { Age = 33, Name = "Ulysses" },
+////    new User { Age = 19, Name = "Vera" },
+////    new User { Age = 31, Name = "Walter" },
+////    new User { Age = 26, Name = "Xena" },
+////    new User { Age = 24, Name = "Yuri" },
+////    new User { Age = 15, Name = "Zoe" },
+////    new User { Age = 12, Name = "Aaron" },
+////    new User { Age = 28, Name = "Bella" },
+////    new User { Age = 12, Name = "Chris" },
+////    new User { Age = 10, Name = "Daisy" }
+////};
+
+//////var groups = products.GroupBy(x => x.Category);
+
+//////foreach (var group in groups)
+//////{
+//////Console.WriteLine(group.Key);
+//////foreach (var item in group)
+//////{
+//////Console.WriteLine("\t" + item.Name);
+//////}
+//////}
+
+////List<Order> orders = new List<Order>();
+
+////Random rand = new Random();
+////DateTime startDate = DateTime.Now.AddMonths(-3);
+
+////for (int i = 1; i <= 50; i++)
+////{
+////orders.Add(new Order
+////{
+////Id = i,
+////PurchaseTime = startDate.AddDays(rand.Next(1, 90)).AddHours(rand.Next(0, 24)).AddMinutes(rand.Next(0, 60)),
+////ProductId = rand.Next(1, 31),  
+////UserId = rand.Next(100, 121)   
+////});
+////}
+///////////
+////var joinedItems = from o in orders
+////join p in products on o.ProductId equals p.Id
+////                  select new
+////{
+////Id = o.Id,
+////PurchaseTime = o.PurchaseTime,
+////ProductName = p.Name,
+////Category =p.Category,
+////Description =p.Description,
+////Price = p.Price,
+////                  };
+
+
+
+
+
+////foreach (var item in joinedItems)
+////{
+//////Console.WriteLine($"{item.PurchaseTime}, {item.ProductName}, {item.Description}");
+////}
+
+////// პროდუქტის ფასი 50-ზე მეტია
+////var moreThan50 = products.Where(p => p.Price > 50);
+
+////// შეძენა გუშინ მოხდა
+////var yesterday = DateTime.Now.AddDays(-1);
+//////Print(yesterday);
+
+////// კატეგორია Electronics - ის პროდუქტები
+////var uniqueProducts = products.DistinctBy(x => x.Category).Select(x => x.Category);
+////////////////////////////////////////
+///////
+
+///////        18+ buyers
+
+
+////foreach (var product in uniqueProducts)
+////{
+////Console.WriteLine(product);
+////}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///////                                         17th les HW
+///////                                         დავალების აღწერა:
+///////          Student - ების სიიდან წამოიღეთ ის სტუდენტები, რომელთა: 
+///////          1.ქულაც 5 - ზე მეტია. 2.ქალაქიც იწყება 'a'- ზე
+
+
+
+////List<Student> students = new List<Student>
+////{
+////    new Student { Name = "Alice Johnson", Age = 16, Grade = 10, City = "New York" },
+////    new Student { Name = "Benjamin Lee", Age = 17, Grade = 11, City = "Los Angeles" },
+////    new Student { Name = "Charlotte Smith", Age = 15, Grade = 9, City = "Chicago" },
+////    new Student { Name = "Daniel Brown", Age = 18, Grade = 12, City = "New York" },  
+////    new Student { Name = "Ella Davis", Age = 16, Grade = 10, City = "Phoenix" },
+////    new Student { Name = "Frank Miller", Age = 17, Grade = 11, City = "Los Angeles" },   
+////    new Student { Name = "Grace Wilson", Age = 15, Grade = 9, City = "San Antonio" },
+////    new Student { Name = "Henry Moore", Age = 18, Grade = 12, City = "Chicago" },        
+////    new Student { Name = "Isabella Taylor", Age = 16, Grade = 10, City = "Dallas" },
+////    new Student { Name = "Jack Anderson", Age = 17, Grade = 11, City = "San Jose" },
+////    new Student { Name = "Katherine Thomas", Age = 15, Grade = 9, City = "Austin" },
+////    new Student { Name = "Liam Martinez", Age = 18, Grade = 12, City = "Phoenix" },         
+////    new Student { Name = "Mia Robinson", Age = 16, Grade = 10, City = "San Antonio" },     
+////    new Student { Name = "Noah Clark", Age = 17, Grade = 11, City = "Dallas" }              
+////};
+
+////var orderedByAge = students.OrderByDescending(x => x.Age);
+////Print(orderedByAge);
+
+////Console.WriteLine("==============================");
+
+////var isAllAdult = students.All(s => s.Age >= 18);
+////Console.WriteLine(isAllAdult);
+
+////Console.WriteLine("==============================");
+
+////var gradeAbove5 = students.Where(a => a.Grade > 5);
+////Print(gradeAbove5);
+
+////Console.WriteLine("==============================");
+////var cityStartsWithA = students.Where(a => a.City.StartsWith("a", StringComparison.OrdinalIgnoreCase));
+////Print(cityStartsWithA);
+
+////static void Print<T>(IEnumerable<T> collection)
+////{
+////    foreach (var item in collection)
+////    {
+////        Console.WriteLine(item);
+////    }
+////}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/////                                          16th les HW
+/////                                           ლამბდას სავარჯიშოები 
+///// 1. დაწერეთ ლამბდა, რომელიც იღებს რიცხვების სიას და აბრუნებს მათ კვადრატების სიას. 
+///// 2. შექმენით ლამბდა, რომელიც ლექსიკონიდან (Dictionary<string, int>)
+///// აბრუნებს იმ ელემენტებს, რომელთა მნიშვნელობა მეტია 10-ზე   
+/////                                                    1.
+/////                                                    
+////List<double> numberList = [2, 3, 7, 5, 12];
+////Func<List<double>, List<double>> squares = numbers =>
+////{
+////    List<double> result = new List<double>();
+////    foreach (var number in numbers)
+////    {
+////        result.Add(Math.Pow(number, 2));
+////    }
+////    return result;
+////};
+////List<double> squaresResult = squares(numberList);
+
+////foreach (var value in squaresResult)
+////{
+////    Console.WriteLine(value);
+////}
+
+/////                                                    2.
+/////                                                    
+
+
+////Dictionary<int, string> dictionary = new Dictionary<int, string>()
+////{
+////    {5, "five"},
+////    {15, "fifteen"},
+////    {25, "twenty five"},
+////    {8, "eight"}
+////};
+
+////string result = string.Empty;
+
+////Action<string> action = s =>
+////{
+////    foreach (var item in dictionary)
+////    {
+
+////        if (item.Key > 10)
+////        {
+////            result = item.Value;
+////            Console.WriteLine(result);
+
+////        }
+
+////    }
+////};
+
+////action("some value");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////using System;
+
+/////                                  15th les HW
+/////                                   Delegates 
+/////                                   
+///// 1. დაწერეთ პროგრამა, რომელიც: · იღებს სტრინგების სიას; 
+///// · Predicate<string> - ით ფილტრავს მხოლოდ მათ, რომლებიც 5-ზე მეტ სიმბოლოს შეიცავს; 
+///// · Action<string> - ით თითოეულს ბეჭდავს დიდ ასოებში. 
+///// 2. დამატებითი სავარჯიშო: · შექმენით საკუთარი delegate, 
+///// რომელიც იღებს ორ მთელ რიცხვს და აბრუნებს განსხვავებას; 
+///// · დაწერეთ პროგრამა, რომელიც ამ delegate-ს იყენებს როგორც ცვლადს.
+
+////string a = "hello";
+////string b = "hello world";
+////string c = "mAkE thIS UpPeRCAsE";
+
+////Predicate<string> predocate = s => s.Length > 5;
+////Console.WriteLine(predocate(a));
+////Console.WriteLine(predocate(b));
+////Action<string> action = s => Console.WriteLine(s.ToUpper());
+////action(c);
+
+
+////MyDelegate myDelegate = diff;
+////Console.WriteLine(myDelegate(2, 3));
+////static int diff(int x, int y)
+////{
+////    int difference;
+////    difference = y - x;
+////    return difference;
+////}
+
+
+////delegate int MyDelegate(int x, int y);
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+////using System.Reflection.Emit;
+////using hwC_Step;
+
+/////                                14th les HW
+/////                            დავალების აღწერა:
+/////                               Generic 
+/////  1. შექმენით Pair<T1, T2> Generic კლასი
+/////  · შეინახოს ორი ტიპის მნიშვნელობა. 
+/////  · ჰქონდეს კონსტრუქტორი და მეთოდი Print(). 
+/////  2. Generic მეთოდი, რომელიც აბრუნებს 
+/////  მინიმუმს public T Min<T>(T a, T b) where T : IComparable<T>     
+
+////class Pair<T1, T2>
+////{
+////    public T1 First { get; set; }
+////    public T2 Second { get; set; }
+
+////    public Pair(T1 first, T2 second)
+////    {
+////        First = first;
+////        Second = second;
+////    }
+
+////    public void Print()
+////    {
+////        Console.WriteLine($"First: {First}, Second: {Second}");
+////    }
+
+////}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+////T Min<T>(T a, T b) where T : IComparable<T>
+////{
+////    return a.CompareTo(b) < 0 ? a : b;
+////}
+
+////Console.WriteLine(Min(5, 2));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+////                             1st les HW 1
+
+////string name;
+////string lastName;
+////int age;
+////string favoriteColor;
+////string favoriteFood;
+
+////Console.WriteLine("enter your name");
+////name = Console.ReadLine();
+
+////Console.WriteLine("enter your LastName");
+////lastName = Console.ReadLine();
+
+////Console.WriteLine("enter your age");
+////age = int.Parse(Console.ReadLine());
+
+////Console.WriteLine("enter your favorite color");
+////favoriteColor = Console.ReadLine();
+
+////Console.WriteLine("enter your favorite food");
+////favoriteFood = Console.ReadLine();
+
+////Console.WriteLine($"your name is {name}" +
+////    $" your last name is {lastName}" +
+////    $" you are {age}" +
+////    $" years old your favourite color is {favoriteColor}" +
+////    $" and your favorite food is {favoriteFood}");
+
+
+
+
+
+
+
+////                           1st les HW 2 
+
+
+////double balance;
+////double depositAmount;
+////double withdrawAmount;
+
+////Console.WriteLine("Enter your balance:");
+////balance = double.Parse(Console.ReadLine());
+
+////Console.WriteLine("Enter the amount you want to deposit:");
+////depositAmount = double.Parse(Console.ReadLine());
+
+////Console.WriteLine("Enter the amount you want to withdraw:");
+////withdrawAmount = double.Parse(Console.ReadLine());
+
+////Console.Clear();
+
+////Console.WriteLine($"Your balance is: {balance + depositAmount - withdrawAmount}");
 
